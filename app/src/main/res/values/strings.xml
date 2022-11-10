@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Tenet</string>
+    <string name="ek_img_content">ExportKit Image</string>
+    <string name="tenet_string">Tenet</string>
+    <string name="forgot_my_password_string"><u>Forgot my password</u></string>
+    <string name="password_string">Password</string>
+    <string name="email_or_phone_number_string">Email or Phone number</string>
+    <string name="sign_up_string">Sign up</string>
+    <string name="sign_in_string">Sign in</string>
+    <string name="tenant_string">Tenet</string>
+    <string name="accept_terms_and_conditions_string">Accept Terms and Conditions</string>
+
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- _bg__signup from your XD file. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+	android:width="393dp"
+	android:height="851dp"
+	android:viewportWidth="398"
+	android:viewportHeight="857" >
+	<path android:fillColor="#817c78"  android:pathData="M 0 0 L 393 0 L 393 851 L 0 851 Zz" />
+</vector>
+

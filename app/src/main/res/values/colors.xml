@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="_bg__signin_color">#4d4540</color>
+    <color name="_bg__signup_color">#817c78</color>
+    <color name="tenet_color">#4c433e</color>
+    <color name="forgot_my_password_color">#403936</color>
+    <color name="base_color">#e4e3de</color>
+    <color name="base_color2">#ecf0f3</color>
+    <color name="password_color">#493f3b</color>
+    <color name="email_or_phone_number_color">#4a403d</color>
+    <color name="icon_awesome_eye_slash_ek1_color">#473e3b</color>
+    <color name="base_ek2_color">#6B605C</color>
+    <color name="sign_up_color">#4f433e</color>
+    <color name="sign_in_color">#544844</color>
+    <color name="tenant_color">#4c433e</color>
+
+</resources>

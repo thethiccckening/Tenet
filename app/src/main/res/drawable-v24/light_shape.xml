@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- light from your XD file. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+	android:width="144dp"
+	android:height="46dp"
+	android:viewportWidth="149"
+	android:viewportHeight="52" >
+	<path android:fillColor="#ecf0f3"  android:strokeColor="#443c39" android:strokeWidth="1"  android:pathData="M 23 0 L 121 0 C 133.7025451660156 0 144 10.29745006561279 144 23 C 144 35.70254898071289 133.7025451660156 46 121 46 L 23 46 C 10.29745006561279 46 0 35.70254898071289 0 23 C 0 10.29745006561279 10.29745006561279 0 23 0 Zz" />
+</vector>
+

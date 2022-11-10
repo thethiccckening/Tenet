@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/_bg__signup_shape.xml" value="0.244" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/base_ek1_shape.xml" value="0.244" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/base_ek1_shapev2.xml" value="0.244" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/base_ek2_shape.xml" value="0.244" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/base_ek3_shape.xml" value="0.244" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/base_shape.xml" value="0.244" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/base_shapev2.xml" value="0.244" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.244" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/icon_awesome_check_circle_ek1_shape.xml" value="0.244" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/icon_awesome_eye_slash_ek1_shape.xml" value="0.244" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/light_ek2_shape.xml" value="0.244" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/light_shape.xml" value="0.244" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/shadow_shape.xml" value="0.244" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/shadow_shapev2.xml" value="0.244" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable/base_ek2_shapev2.xml" value="0.244" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable/ic_launcher_background.xml" value="0.244" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/layout/activity_main.xml" value="0.3087719298245614" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/layout/activity_signin.xml" value="0.3087719298245614" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/layout/activity_signup.xml" value="0.25" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/testapp/app/src/main/res/drawable-nodpi/base_shape.xml" value="0.117" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/testapp/app/src/main/res/drawable-v24/base_ek2_shape.xml" value="0.117" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/testapp/app/src/main/res/drawable-v24/base_ek3_shape.xml" value="0.117" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/testapp/app/src/main/res/drawable-v24/base_shape.xml" value="0.117" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/testapp/app/src/main/res/drawable-v24/light_ek2_shape.xml" value="0.117" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/testapp/app/src/main/res/drawable-v24/shadow_shape.xml" value="0.117" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/testapp/app/src/main/res/font/agencyfb_bold.xml" value="0.3247863247863248" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/testapp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

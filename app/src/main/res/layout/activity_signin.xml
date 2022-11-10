@@ -1,0 +1,159 @@
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    tools:context=".Signin">
+
+    <ScrollView android:id="@+id/signin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout android:id="@+id/content_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:id="@+id/_bg__signin"
+                android:layout_width="393dp"
+                android:layout_height="851dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/_bg__signup_shape" />
+
+            <ImageView android:id="@+id/l1_removebg_preview"
+                android:src="@drawable/l1_removebg_preview"
+                android:contentDescription="l1_removebg_preview"
+                android:layout_marginStart="156dp"
+                android:layout_marginTop="203dp"
+                android:layout_width="81dp"
+                android:layout_height="107dp" />
+
+            <TextView
+                android:id="@+id/tenet"
+                android:layout_width="77dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginLeft="157dp"
+                android:layout_marginTop="326dp"
+                android:fontFamily="@font/agencyfb_bold"
+                android:gravity="center"
+                android:text="@string/tenet_string"
+                android:textColor="@color/tenet_color"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:enabled="false"/>
+
+            <View
+                android:id="@+id/base_ek1"
+                android:layout_width="311dp"
+                android:layout_height="62dp"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="443dp"
+                android:background="@drawable/base_ek1_shape" />
+
+            <EditText
+                android:id="@+id/email_or_phone_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="62dp"
+                android:layout_marginTop="468dp"
+                android:layout_marginRight="69dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/arialn"
+                android:hint="@string/email_or_phone_number_string"
+                android:textColor="@color/password_color"
+                android:textSize="16sp" />
+
+            <View
+                android:id="@+id/base"
+                android:layout_width="311dp"
+                android:layout_height="62dp"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="524dp"
+                android:background="@drawable/base_shape" />
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="83dp"
+                android:layout_height="28dp"
+                android:layout_marginLeft="62dp"
+                android:layout_marginTop="545dp"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/arialn"
+                android:hint="@string/password_string"
+                android:textColor="@color/password_color"
+                android:textSize="16sp" />
+
+            <ImageView android:id="@+id/icon_awesome_eye_slash"
+                android:src="@drawable/icon_awesome_eye_slash"
+                android:contentDescription="icon_awesome_eye_slash"
+                android:layout_marginStart="314dp"
+                android:layout_marginTop="549dp"
+                android:layout_width="18dp"
+                android:layout_height="15dp" />
+
+            <TextView
+                android:id="@+id/forgot_my_password"
+                android:layout_width="120dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="68dp"
+                android:layout_marginTop="600dp"
+                android:enabled="false"
+                android:fontFamily="@font/arialn"
+                android:text="@string/forgot_my_password_string"
+                android:textColor="@color/forgot_my_password_color"
+                android:textSize="12sp" />
+
+
+            <View
+                android:id="@+id/shadow"
+                android:background="@drawable/base_ek2_shapev2"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="650dp"
+                android:layout_width="195dp"
+                android:layout_height="62dp" />
+
+
+            <TextView
+                android:id="@+id/sign_in"
+                android:layout_width="85dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginLeft="155dp"
+                android:layout_marginTop="657dp"
+                android:fontFamily="@font/arialn"
+                android:gravity="center"
+                android:text="@string/sign_in_string"
+                android:textColor="@color/sign_in_color"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+
+            <View
+                android:id="@+id/base_ek3"
+                android:layout_width="146dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="126dp"
+                android:layout_marginTop="729dp"
+                android:background="@drawable/base_ek2_shapev2" />
+
+            <TextView android:id="@+id/sign_up"
+                android:fontFamily="@font/arialn"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal|center"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:textColor="@color/sign_up_color"
+                android:layout_marginLeft="161.5dp"
+                android:layout_marginTop="737.5dp"
+                android:layout_width="71dp"
+                android:layout_height="33dp"
+                android:text="@string/sign_up_string"
+                android:enabled="false"
+                />
+
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+</HorizontalScrollView>
