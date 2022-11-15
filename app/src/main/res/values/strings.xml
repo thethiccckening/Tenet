@@ -9,5 +9,29 @@
     <string name="sign_in_string">Sign in</string>
     <string name="tenant_string">Tenet</string>
     <string name="accept_terms_and_conditions_string">Accept Terms and Conditions</string>
+    <string name="____input_text_string">Enter your city</string>
+    <string name="____label_string">Location</string>
+    <string name="____label_ek1_string">View</string>
+    <string name="____label_ek2_string">Clear</string>
 
+    <string name="____label_string_rpmin">$0</string>
+    <string name="____label_ek1_string_rpmax">$5000</string>
+    <string name="____label_ek2_string_rp">Rent Price</string>
+    <string name="left_bdroom_limit">0</string>
+    <string name="right_bdroom_limit">5</string>
+    <string name="bedroom_slider_label">Bedroom</string>
+    <string name="bathroom_slider_label">Bathroom</string>
+    <string name="parking_slider_label">Parking Spot</string>
+    <string name="utilities_label">Utilities</string>
+    <string name="hydro_label">Hydro</string>
+    <string name="heating_label">Heating</string>
+    <string name="water_label">Water</string>
+    <string name="wifi_label">Internet</string>
+    <string name="cable_label">Cable/TV</string>
+    <string name="amenities_label">Amenities</string>
+    <string name="ac_label">A/C</string>
+    <string name="gym_label">Fitness</string>
+    <string name="laundry_label">Laundry</string>
+    <string name="pool_label">Pool</string>
+    <string name="dishwasher_label">Dishwasher</string>
 </resources>

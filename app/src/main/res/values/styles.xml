@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<!-- map styles -->
+
+	<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+		<item name="sliderStyle">@color/_bg__signin_color</item>
+
+	</style>
+
+	<style name="Widget.App.Slider" parent="Widget.MaterialComponents.Slider">
+		<item name="materialThemeOverlay">@style/ThemeOverlay.App.Slider</item>
+		<item name="labelStyle">@style/Widget.App.Tooltip</item>
+	</style>
+
+	<style name="ThemeOverlay.App.Slider" parent="">
+		<item name="colorPrimary">@color/_bg__signin_color</item>
+		<item name="colorOnPrimary">@color/_bg__signin_color</item>
+		<item name="colorOnSurface">@color/_bg__signin_color</item>
+	</style>
+
+	<style name="Widget.App.Tooltip" parent="Widget.MaterialComponents.Tooltip">
+		<item name="android:textAppearance">@style/TextAppearance.App.Tooltip</item>
+		<item name="backgroundTint">@color/_bg__search___1_color</item>
+	</style>
+
+
+	<style name="TextAppearance.App.Tooltip" parent="TextAppearance.MaterialComponents.Tooltip">
+		<item name="fontFamily">@font/arialn</item>
+		<item name="android:textColor">@color/base_ek2_color</item>
+	</style>
+</resources>
