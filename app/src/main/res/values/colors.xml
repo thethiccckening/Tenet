@@ -45,4 +45,8 @@
 
     <color name="_bg__chats_cont_color">#d0cec9</color>
     <color name="base_ek1_color">#cc9d59</color>
+
+    <color name="_bg__settings___1_color">#d0cec9</color>
+    <color name="____input_text_color">#4c433e</color>
+    <color name="____label_ek5_color">#e4e3de</color>
 </resources>

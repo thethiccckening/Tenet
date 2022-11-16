@@ -27,7 +27,6 @@
                 android:layout_height="wrap_content"
                 >
 
-
                 <RelativeLayout android:id="@+id/component_16___2"
                     android:layout_marginTop="0dp"
                     android:layout_marginStart="0dp"
@@ -35,12 +34,13 @@
                     android:layout_height="wrap_content"
                     >
 
-                    <View   android:id="@+id/rectangle_1"
-                        android:background="@drawable/rectangle_1_shape"
+                    <View
+                        android:id="@+id/rectangle_1"
+                        android:layout_width="396dp"
+                        android:layout_height="75dp"
                         android:layout_marginStart="0dp"
                         android:layout_marginTop="0dp"
-                        android:layout_width="396dp"
-                        android:layout_height="75dp" />
+                        android:background="@drawable/rectangle_1_shape" />
 
                 </RelativeLayout>
 
@@ -108,27 +108,28 @@
 
             </RelativeLayout>
 
-            <ImageView android:id="@+id/l1_removebg_preview"
-                android:src="@drawable/l1_removebg_preview"
-                android:contentDescription="l1_removebg_preview"
+            <ImageView
+                android:id="@+id/l1_removebg_preview"
+                android:layout_width="29dp"
+                android:layout_height="38dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginTop="9dp"
-                android:layout_width="29dp"
-                android:layout_height="38dp" />
+                android:contentDescription="l1_removebg_preview"
+                android:src="@drawable/l1_removebg_preview" />
 
-            <TextView android:id="@+id/tenet"
-                android:fontFamily="@font/agencyfb_bold"
-                android:textStyle="bold"
-                android:layout_gravity="center_horizontal|center"
-                android:gravity="center"
-                android:textSize="26sp"
-                android:textColor="@color/tenet_color"
-                android:layout_marginLeft="36dp"
-                android:layout_marginTop="4dp"
+            <TextView
+                android:id="@+id/tenet"
                 android:layout_width="77dp"
                 android:layout_height="48dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/agencyfb_bold"
+                android:gravity="center"
                 android:text="@string/tenet_string"
-                />
+                android:textColor="@color/tenet_color"
+                android:textSize="26sp"
+                android:textStyle="bold" />
 
             <TextView android:id="@+id/message_date"
                 android:fontFamily="@font/arialn"
@@ -291,25 +292,28 @@
                     android:layout_height="wrap_content"
                     >
 
-                    <ImageView android:id="@+id/down_ek1"
-                        android:src="@drawable/down_ek1_chat"
-                        android:contentDescription="down_ek1"
+                    <ImageView
+                        android:id="@+id/down_ek1"
+                        android:layout_width="354dp"
+                        android:layout_height="53dp"
                         android:layout_marginStart="0dp"
                         android:layout_marginTop="0dp"
-                        android:layout_width="354dp"
-                        android:layout_height="53dp" />
+                        android:contentDescription="down_ek1"
+                        android:src="@drawable/down_ek1_chat" />
 
                 </RelativeLayout>
 
-                <TextView android:id="@+id/search_messages"
-                    android:fontFamily="@font/arialn"
-                    android:textSize="16sp"
-                    android:textColor="@color/search_messages_color"
-                    android:layout_marginLeft="27dp"
-                    android:layout_marginTop="36dp"
+                <EditText
+                    android:id="@+id/search_messages"
                     android:layout_width="141dp"
                     android:layout_height="28dp"
+                    android:layout_marginLeft="27dp"
+                    android:layout_marginTop="36dp"
+                    android:fontFamily="@font/arialn"
                     android:text=""
+                    android:textColor="@color/search_messages_color"
+                    android:textSize="16sp"
+                    android:background="@android:color/transparent"
                     />
 
                 <ImageView android:id="@+id/path_3_copy_2_ek1"

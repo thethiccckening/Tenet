@@ -253,17 +253,17 @@
 
                 </RelativeLayout>
 
-                <EditText android:id="@+id/search_messages"
-                    android:fontFamily="@font/arialn"
-                    android:textSize="16sp"
-                    android:textColor="@color/search_messages_color"
-                    android:layout_marginLeft="25dp"
-                    android:layout_marginTop="19dp"
+                <EditText
+                    android:id="@+id/search_messages"
                     android:layout_width="141dp"
                     android:layout_height="28dp"
-                    android:hint="@string/search_messages_string"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="19dp"
                     android:background="@android:color/transparent"
-                    />
+                    android:fontFamily="@font/arialn"
+                    android:hint="@string/search_messages_string"
+                    android:textColor="@color/search_messages_color"
+                    android:textSize="16sp" />
 
             </RelativeLayout>
 

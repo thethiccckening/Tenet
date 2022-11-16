@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/______container_l_color_ek1_shape.xml" value="0.2905" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/______container_l_color_ek3_shape.xml" value="0.2335" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/______container_l_color_ek5_shape.xml" value="0.2335" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/______container_l_color_shape.xml" value="0.2905" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/____color_l_container_ek1_shape.xml" value="0.2905" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/____color_l_container_shape.xml" value="0.2905" />
@@ -13,6 +15,7 @@
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/_bg__chats_shape.xml" value="0.2325" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/_bg__map_shape.xml" value="0.196" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/_bg__search___1_shape.xml" value="0.2905" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/_bg__settings___1_shape.xml" value="0.2335" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/_bg__signup_shape.xml" value="0.244" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/base_ek1_shape.xml" value="0.244" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable-v24/base_ek1_shapev2.xml" value="0.244" />
@@ -41,6 +44,7 @@
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/layout/activity_map.xml" value="0.33" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/layout/activity_personal_chat.xml" value="0.3087719298245614" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/layout/activity_search.xml" value="0.33" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/layout/activity_settings.xml" value="0.2969298245614035" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/layout/activity_signin.xml" value="0.242520398912058" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/layout/activity_signup.xml" value="0.25" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/layout/yeye.xml" value="0.15833333333333333" />

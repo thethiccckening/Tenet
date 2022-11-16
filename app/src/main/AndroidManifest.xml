@@ -13,8 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Testapp"
         tools:targetApi="31">
+
         <activity
-            android:name=".PersonalChat"
+            android:name=".Settings"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +23,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".PersonalChat"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".Chat"
             android:exported="true">
@@ -34,7 +43,7 @@
         </activity>
         <activity
             android:name=".Search"
-            android:exported="true"></activity>
+            android:exported="true" />
         <activity
             android:name=".Map"
             android:exported="true" />

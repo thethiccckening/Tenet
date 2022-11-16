@@ -43,4 +43,15 @@
     <string name="message_date_string">2022-10-08</string>
     <string name="message__string">Message </string>
     <string name="message__ek1_string">Message </string>
+
+    <string name="____input_text_string_settings">My name</string>
+    <string name="____label_string_settings">Name</string>
+    <string name="____input_text_ek1_string_settings">My email</string>
+    <string name="____label_ek1_string_settings">Email</string>
+    <string name="____input_text_ek2_string">My password</string>
+    <string name="____label_ek2_string_settings">Password</string>
+    <string name="____label_ek3_string">Notifications</string>
+    <string name="____label_ek4_string">Profile</string>
+    <string name="____label_ek5_string">Done</string>
+    <string name="____label_ek6_string">Logout</string>
 </resources>
