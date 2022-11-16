@@ -35,9 +35,12 @@
     <string name="pool_label">Pool</string>
     <string name="dishwasher_label">Dishwasher</string>
 
-
     <string name="____input_text_string_chat">The last sent message...</string>
     <string name="____label_string_chat">Gerrardo</string>
     <string name="____input_text_ek1_string">Date</string>
     <string name="search_messages_string">Search Messages</string>
+
+    <string name="message_date_string">2022-10-08</string>
+    <string name="message__string">Message </string>
+    <string name="message__ek1_string">Message </string>
 </resources>

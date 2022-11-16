@@ -43,4 +43,6 @@
     <color name="______container_l_color_ek1_color">#e4e3de</color>
     <color name="search_messages_color">#493f3b</color>
 
+    <color name="_bg__chats_cont_color">#d0cec9</color>
+    <color name="base_ek1_color">#cc9d59</color>
 </resources>
