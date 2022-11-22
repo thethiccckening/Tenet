@@ -9,5 +9,49 @@
     <string name="sign_in_string">Sign in</string>
     <string name="tenant_string">Tenet</string>
     <string name="accept_terms_and_conditions_string">Accept Terms and Conditions</string>
+    <string name="____input_text_string">Enter your city</string>
+    <string name="____label_string">Location</string>
+    <string name="____label_ek1_string">View</string>
+    <string name="____label_ek2_string">Clear</string>
 
+    <string name="____label_string_rpmin">$0</string>
+    <string name="____label_ek1_string_rpmax">$5000</string>
+    <string name="____label_ek2_string_rp">Rent Price</string>
+    <string name="left_bdroom_limit">0</string>
+    <string name="right_bdroom_limit">5</string>
+    <string name="bedroom_slider_label">Bedroom</string>
+    <string name="bathroom_slider_label">Bathroom</string>
+    <string name="parking_slider_label">Parking Spot</string>
+    <string name="utilities_label">Utilities</string>
+    <string name="hydro_label">Hydro</string>
+    <string name="heating_label">Heating</string>
+    <string name="water_label">Water</string>
+    <string name="wifi_label">Internet</string>
+    <string name="cable_label">Cable/TV</string>
+    <string name="amenities_label">Amenities</string>
+    <string name="ac_label">A/C</string>
+    <string name="gym_label">Fitness</string>
+    <string name="laundry_label">Laundry</string>
+    <string name="pool_label">Pool</string>
+    <string name="dishwasher_label">Dishwasher</string>
+
+    <string name="____input_text_string_chat">The last sent message...</string>
+    <string name="____label_string_chat">Gerrardo</string>
+    <string name="____input_text_ek1_string">Date</string>
+    <string name="search_messages_string">Search Messages</string>
+
+    <string name="message_date_string">2022-10-08</string>
+    <string name="message__string">Message </string>
+    <string name="message__ek1_string">Message </string>
+
+    <string name="____input_text_string_settings">My name</string>
+    <string name="____label_string_settings">Name</string>
+    <string name="____input_text_ek1_string_settings">My email</string>
+    <string name="____label_ek1_string_settings">Email</string>
+    <string name="____input_text_ek2_string">My password</string>
+    <string name="____label_ek2_string_settings">Password</string>
+    <string name="____label_ek3_string">Notifications</string>
+    <string name="____label_ek4_string">Profile</string>
+    <string name="____label_ek5_string">Done</string>
+    <string name="____label_ek6_string">Logout</string>
 </resources>

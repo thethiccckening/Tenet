@@ -1,0 +1,1301 @@
+<HorizontalScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView android:id="@+id/search___1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout android:id="@+id/content_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <View
+                android:id="@+id/_bg__search___1"
+                android:layout_width="393dp"
+                android:layout_height="829dp"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@drawable/_bg__search___1_shape" />
+
+            <ImageView
+                android:id="@+id/l1_removebg_preview"
+                android:layout_width="29dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="9dp"
+                android:contentDescription="l1_removebg_preview"
+                android:src="@drawable/l1_removebg_preview" />
+
+            <TextView
+                android:id="@+id/tenet"
+                android:layout_width="77dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginLeft="36dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/agencyfb_bold"
+                android:gravity="center"
+                android:text="@string/tenet_string"
+                android:textColor="@color/tenet_color"
+                android:textSize="26sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout android:id="@+id/location_textbox"
+                android:layout_marginTop="58dp"
+                android:layout_marginStart="0dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <View
+                    android:id="@+id/______container_l_color"
+                    android:layout_width="395dp"
+                    android:layout_height="58dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/______container_l_color_shape" />
+
+                <EditText
+                    android:id="@+id/____input_text"
+                    android:layout_width="117dp"
+                    android:layout_height="28dp"
+                    android:layout_marginLeft="17dp"
+                    android:layout_marginTop="36dp"
+                    android:background="@android:color/transparent"
+                    android:fontFamily="@font/arialn"
+                    android:hint="@string/____input_text_string"
+                    android:textColor="@color/tenet_color"
+                    android:textSize="16sp" />
+
+
+                <RelativeLayout android:id="@+id/top_label"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginStart="1dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <TextView android:id="@+id/____label"
+                        android:fontFamily="@font/agencyfb_bold"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/tenet_color"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_width="62dp"
+                        android:layout_height="29dp"
+                        android:text="@string/____label_string"
+                        />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!--
+            /* Rent Price SELECTION
+            -->
+            <RelativeLayout
+                android:id="@+id/rent_price_slider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="160dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/leftprice_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="27dp">
+
+                    <View
+                        android:id="@+id/______container_l_color_priceslider"
+                        android:layout_width="69dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/______container_l_color_shape" />
+
+                    <EditText
+                        android:id="@+id/____label_priceslider"
+                        android:layout_width="30dp"
+                        android:layout_height="27.5dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="-1dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/____label_string_rpmin"
+                        android:textColor="@color/____label_color"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+
+                <!-- Discrete slider -->
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/discretepriceRangeSlider"
+                    style="@style/Widget.App.Slider"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:stepSize="100.0"
+                    android:valueFrom="0.0"
+                    android:valueTo="5000.0"
+                    app:values="@array/initial_priceslider_values" />
+
+                <RelativeLayout
+                    android:id="@+id/rightprice_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="320dp"
+                    android:layout_marginTop="27dp">
+
+                    <View
+                        android:id="@+id/______container_l_color_ek1"
+                        android:layout_width="69dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/______container_l_color_ek1_shape" />
+
+                    <EditText
+                        android:id="@+id/____label_ek1_priceslider"
+                        android:layout_width="66dp"
+                        android:layout_height="27.5dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="-1dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/____label_ek1_string_rpmax"
+                        android:textColor="@color/____label_color"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rent_price_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="0dp">
+
+                    <TextView
+                        android:id="@+id/____label_ek2_priceslider"
+                        android:layout_width="75dp"
+                        android:layout_height="29dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/agencyfb_bold"
+                        android:text="@string/____label_ek2_string_rp"
+                        android:textColor="@color/____label_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!--
+            /* Bedroom SELECTION
+            -->
+            <RelativeLayout
+                android:id="@+id/bedroom_slider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="220dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/leftbedroom_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="27dp">
+
+                    <View
+                        android:id="@+id/______container_l_color_bedroomslider"
+                        android:layout_width="69dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/______container_l_color_shape" />
+
+                    <EditText
+                        android:id="@+id/____label_bedroomslider"
+                        android:layout_width="30dp"
+                        android:layout_height="27.5dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="-1dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/left_bdroom_limit"
+                        android:textColor="@color/____label_color"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+
+                <!-- Discrete slider -->
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/discretebedroomRangeSlider"
+                    style="@style/Widget.App.Slider"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:stepSize="1.0"
+                    android:valueFrom="0.0"
+                    android:valueTo="5.0"
+                    app:values="@array/initial_bedroomslider_values" />
+
+                <RelativeLayout
+                    android:id="@+id/rightbedroom_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="320dp"
+                    android:layout_marginTop="27dp">
+
+                    <View
+                        android:id="@+id/______container_l_color_ek1_bedroom"
+                        android:layout_width="69dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/______container_l_color_ek1_shape" />
+
+                    <EditText
+                        android:id="@+id/____label_ek1_bedroomslider"
+                        android:layout_width="66dp"
+                        android:layout_height="27.5dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="-1dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/right_bdroom_limit"
+                        android:textColor="@color/____label_color"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/bedroom_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="0dp">
+
+                    <TextView
+                        android:id="@+id/____label_ek2_bedroomslider"
+                        android:layout_width="75dp"
+                        android:layout_height="29dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/agencyfb_bold"
+                        android:text="@string/bedroom_slider_label"
+                        android:textColor="@color/____label_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!--
+            /* Bathroom SELECTION
+            -->
+
+            <RelativeLayout
+                android:id="@+id/bathroom_slider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="280dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/leftbathroom_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="27dp">
+
+                    <View
+                        android:id="@+id/______container_l_color_bathroomslider"
+                        android:layout_width="69dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/______container_l_color_shape" />
+
+                    <EditText
+                        android:id="@+id/____label_bathroomslider"
+                        android:layout_width="30dp"
+                        android:layout_height="27.5dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="-1dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/left_bdroom_limit"
+                        android:textColor="@color/____label_color"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+
+                <!-- Discrete slider -->
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/discretebathroomRangeSlider"
+                    style="@style/Widget.App.Slider"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:stepSize="1.0"
+                    android:valueFrom="0.0"
+                    android:valueTo="5.0"
+                    app:values="@array/initial_bedroomslider_values" />
+
+                <RelativeLayout
+                    android:id="@+id/rightbathroom_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="320dp"
+                    android:layout_marginTop="27dp">
+
+                    <View
+                        android:id="@+id/______container_l_color_ek1_bathroom"
+                        android:layout_width="69dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/______container_l_color_ek1_shape" />
+
+                    <EditText
+                        android:id="@+id/____label_ek1_bathroomslider"
+                        android:layout_width="66dp"
+                        android:layout_height="27.5dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="-1dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/right_bdroom_limit"
+                        android:textColor="@color/____label_color"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/bathroom_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="0dp">
+
+                    <TextView
+                        android:id="@+id/____label_ek2_bathroomslider"
+                        android:layout_width="75dp"
+                        android:layout_height="29dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/agencyfb_bold"
+                        android:text="@string/bathroom_slider_label"
+                        android:textColor="@color/____label_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!--
+            /* Parking SELECTION
+            -->
+
+            <RelativeLayout
+                android:id="@+id/parking_slider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="340dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/leftparking_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="0dp"
+                    android:layout_marginTop="27dp">
+
+                    <View
+                        android:id="@+id/______container_l_color_parkingslider"
+                        android:layout_width="69dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/______container_l_color_shape" />
+
+                    <EditText
+                        android:id="@+id/____label_parkingslider"
+                        android:layout_width="30dp"
+                        android:layout_height="27.5dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="-1dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/left_bdroom_limit"
+                        android:textColor="@color/____label_color"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+
+                <!-- Discrete slider -->
+
+                <com.google.android.material.slider.RangeSlider
+                    android:id="@+id/discreteparkingRangeSlider"
+                    style="@style/Widget.App.Slider"
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="64dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="32dp"
+                    android:layout_marginBottom="32dp"
+                    android:stepSize="1.0"
+                    android:valueFrom="0.0"
+                    android:valueTo="5.0"
+                    app:values="@array/initial_bedroomslider_values" />
+
+                <RelativeLayout
+                    android:id="@+id/rightparking_limit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="320dp"
+                    android:layout_marginTop="27dp">
+
+                    <View
+                        android:id="@+id/______container_l_color_ek1_parking"
+                        android:layout_width="69dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/______container_l_color_ek1_shape" />
+
+                    <EditText
+                        android:id="@+id/____label_ek1_parkinglider"
+                        android:layout_width="66dp"
+                        android:layout_height="27.5dp"
+                        android:layout_marginLeft="12dp"
+                        android:layout_marginTop="-1dp"
+                        android:background="@android:color/transparent"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/right_bdroom_limit"
+                        android:textColor="@color/____label_color"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/parking_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="0dp">
+
+                    <TextView
+                        android:id="@+id/____label_ek2_parkingslider"
+                        android:layout_width="75dp"
+                        android:layout_height="29dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/agencyfb_bold"
+                        android:text="@string/parking_slider_label"
+                        android:textColor="@color/____label_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!--
+            /* Utilities SELECTION
+            -->
+
+            <RelativeLayout
+                android:id="@+id/utilities_selection"
+                android:layout_width="398dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="410dp">
+
+                <RelativeLayout
+                    android:id="@+id/utilities_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="0dp">
+
+                    <TextView
+                        android:id="@+id/____label_ek2_utilitesslider"
+                        android:layout_width="75dp"
+                        android:layout_height="29dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/agencyfb_bold"
+                        android:text="@string/utilities_label"
+                        android:textColor="@color/____label_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+                <!--
+                /* HYDRO SELECTION
+                -->
+                <RelativeLayout
+                    android:id="@+id/hydro_selection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/hydro_label"
+                        android:layout_width="51dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="41dp"
+                        android:alpha="0.6"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/hydro_label"
+                        android:textColor="@color/____label_color"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/water_ec_fill0_wght400_grad0_opsz48"
+                        android:layout_width="18dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="69dp"
+                        android:contentDescription="water_ec_fill0_wght400_grad0_opsz48"
+                        android:src="@drawable/water_ec_fill0_wght400_grad0_opsz48" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/hydro_selection_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="0dp">
+
+                        <CheckBox
+                            android:id="@+id/hydro_checkBox"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:text=""
+                            app:buttonTint="@color/_bg__signin_color" />
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <!--
+                /* HEATING SELECTION
+                -->
+                <RelativeLayout
+                    android:id="@+id/heating_selection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="78dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/heating_label"
+                        android:layout_width="63dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="41dp"
+                        android:alpha="0.6"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/heating_label"
+                        android:textColor="@color/____label_color"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/local_fire_department_fill0_wght400_grad0_opsz48"
+                        android:layout_width="18.004516601562dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="17dp"
+                        android:layout_marginTop="69dp"
+                        android:contentDescription="local_fire_department_fill0_wght400_grad0_opsz48"
+                        android:src="@drawable/local_fire_department_fill0_wght400_grad0_opsz48" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/heating_selection_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="0dp">
+
+                        <CheckBox
+                            android:id="@+id/heating_checkBox"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:text=""
+                            app:buttonTint="@color/_bg__signin_color" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <!--
+              /* Water SELECTION
+              -->
+
+                <RelativeLayout
+                    android:id="@+id/water_selection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="158dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/water_label"
+                        android:layout_width="50dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="41dp"
+                        android:alpha="0.6"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/water_label"
+                        android:textColor="@color/____label_color"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/water_drop_fill0_wght400_grad0_opsz48"
+                        android:layout_width="18dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="69dp"
+                        android:contentDescription="water_drop_fill0_wght400_grad0_opsz48"
+                        android:src="@drawable/water_drop_fill0_wght400_grad0_opsz48" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/water_selection_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="0dp">
+
+                        <CheckBox
+                            android:id="@+id/water_checkBox"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:text=""
+                            app:buttonTint="@color/_bg__signin_color" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <!--
+                  /* Internet SELECTION
+                -->
+
+                <RelativeLayout
+                    android:id="@+id/internet_selection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="226dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/wifi_label"
+                        android:layout_width="62dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="41dp"
+                        android:alpha="0.6"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/wifi_label"
+                        android:textColor="@color/____label_color"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/wifi_fill0_wght400_grad0_opsz48"
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="69dp"
+                        android:contentDescription="wifi_fill0_wght400_grad0_opsz48"
+                        android:src="@drawable/wifi_fill0_wght400_grad0_opsz48" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/internet_selection_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="0dp">
+
+
+                        <CheckBox
+                            android:id="@+id/wifi_checkBox"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:text=""
+                            app:buttonTint="@color/_bg__signin_color" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <!--
+                /* Cable SELECTION
+              -->
+                <RelativeLayout
+                    android:id="@+id/cable_selection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="294dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/cable_label"
+                        android:layout_width="73dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="41dp"
+                        android:alpha="0.6"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/cable_label"
+                        android:textColor="@color/____label_color"
+                        android:textSize="14sp" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/cable__selection_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="0dp">
+
+
+                        <CheckBox
+                            android:id="@+id/cable_checkBox"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:text=""
+                            app:buttonTint="@color/_bg__signin_color" />
+
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/cable_fill0_wght400_grad0_opsz48"
+                        android:layout_width="17.96728515625dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="69dp"
+                        android:contentDescription="cable_fill0_wght400_grad0_opsz48"
+                        android:src="@drawable/cable_fill0_wght400_grad0_opsz48" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+            <!--
+            /* Amenities SELECTION
+            -->
+
+            <RelativeLayout
+                android:id="@+id/amenities_selection"
+                android:layout_width="398dp"
+                android:layout_height="130dp"
+                android:layout_marginStart="2dp"
+                android:layout_marginTop="530dp">
+
+                <RelativeLayout
+                    android:id="@+id/amenities_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="0dp">
+
+                    <TextView
+                        android:id="@+id/amenities_text_label"
+                        android:layout_width="75dp"
+                        android:layout_height="29dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="0dp"
+                        android:fontFamily="@font/agencyfb_bold"
+                        android:text="@string/amenities_label"
+                        android:textColor="@color/____label_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </RelativeLayout>
+                <!--
+                /* AC SELECTION
+                -->
+                <RelativeLayout
+                    android:id="@+id/ac_selection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/ac_label"
+                        android:layout_width="51dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="7dp"
+                        android:layout_marginTop="41dp"
+                        android:alpha="0.6"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/ac_label"
+                        android:textColor="@color/____label_color"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/ac_image_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="69dp"
+                        android:contentDescription="ac_unit_fill0_wght400_grad0_opsz48"
+                        android:src="@drawable/ac_unit_fill0_wght400_grad0_opsz48" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/ac_selection_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="0dp">
+
+                        <CheckBox
+                            android:id="@+id/ac_checkBox"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:text=""
+                            app:buttonTint="@color/_bg__signin_color" />
+
+
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <!--
+                /* Gym SELECTION
+                -->
+                <RelativeLayout
+                    android:id="@+id/gym_selection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="78dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/gym_label"
+                        android:layout_width="63dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="41dp"
+                        android:alpha="0.6"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/gym_label"
+                        android:textColor="@color/____label_color"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/gym_icon"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="9dp"
+                        android:layout_marginTop="60dp"
+                        android:contentDescription="fitness_center_fill0_wght400_grad0_opsz48"
+                        android:src="@drawable/fitness_center_fill0_wght400_grad0_opsz48" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/gym_selection_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="0dp">
+
+                        <CheckBox
+                            android:id="@+id/gym_checkBox"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:text=""
+                            app:buttonTint="@color/_bg__signin_color" />
+
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <!--
+              /* Laundry SELECTION
+              -->
+
+                <RelativeLayout
+                    android:id="@+id/laundry_selection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="158dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/laundry_label"
+                        android:layout_width="52dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="41dp"
+                        android:alpha="0.6"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/laundry_label"
+                        android:textColor="@color/____label_color"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/laundry_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="63dp"
+                        android:contentDescription="local_laundry_service_fill0_wght400_grad0_opsz48"
+                        android:src="@drawable/local_laundry_service_fill0_wght400_grad0_opsz48" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/laundry_selection_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="0dp">
+
+                        <CheckBox
+                            android:id="@+id/laundry_checkBox"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:text=""
+                            app:buttonTint="@color/_bg__signin_color" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <!--
+                  /* Pool SELECTION
+                -->
+
+                <RelativeLayout
+                    android:id="@+id/pool_selection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="226dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/pool_label"
+                        android:layout_width="62dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="41dp"
+                        android:alpha="0.6"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/pool_label"
+                        android:textColor="@color/____label_color"
+                        android:textSize="14sp" />
+
+                    <ImageView
+                        android:id="@+id/pool_icon"
+                        android:layout_width="30dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="11dp"
+                        android:layout_marginTop="69dp"
+                        android:contentDescription="pool_fill0_wght400_grad0_opsz48"
+                        android:src="@drawable/pool_fill0_wght400_grad0_opsz48" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/pool_selection_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginTop="0dp">
+
+
+                        <CheckBox
+                            android:id="@+id/pool_checkBox"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:text=""
+                            app:buttonTint="@color/_bg__signin_color" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+                <!--
+                /* Dishwasher SELECTION
+              -->
+                <RelativeLayout
+                    android:id="@+id/dishwasher_selection"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="294dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/dishwasher_label"
+                        android:layout_width="75dp"
+                        android:layout_height="26dp"
+                        android:layout_marginLeft="0dp"
+                        android:layout_marginTop="41dp"
+                        android:alpha="0.6"
+                        android:fontFamily="@font/arialn"
+                        android:text="@string/dishwasher_label"
+                        android:textColor="@color/____label_color"
+                        android:textSize="14sp" />
+
+
+                    <RelativeLayout
+                        android:id="@+id/dishwasher__selection_checkbox"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="13dp"
+                        android:layout_marginTop="0dp">
+
+
+                        <CheckBox
+                            android:id="@+id/dishwasher_checkBox"
+                            android:layout_width="30dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="0dp"
+                            android:text=""
+                            app:buttonTint="@color/_bg__signin_color" />
+
+
+                    </RelativeLayout>
+
+                    <ImageView
+                        android:id="@+id/dishwasher_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="21dp"
+                        android:layout_marginTop="65dp"
+                        android:contentDescription="dishwasher_gen_fill0_wght400_grad0_opsz48"
+                        android:src="@drawable/dishwasher_gen_fill0_wght400_grad0_opsz48" />
+
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:id="@+id/navigation_bar"
+                android:layout_marginTop="756dp"
+                android:layout_marginStart="-1dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+
+                <RelativeLayout android:id="@+id/component_16___4"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <View
+                        android:id="@+id/rectangle_1"
+                        android:layout_width="396dp"
+                        android:layout_height="75dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/rectangle_1_shape" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout android:id="@+id/nav_bar_icons"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginStart="50dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <ImageView android:id="@+id/manage_accounts_fill0_wght400_grad0_opsz48"
+                        android:src="@drawable/manage_accounts_fill0_wght400_grad0_opsz48"
+                        android:contentDescription="manage_accounts_fill0_wght400_grad0_opsz48"
+                        android:layout_marginStart="258dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_width="40.965576171875dp"
+                        android:layout_height="40dp" />
+
+                    <ImageView android:id="@+id/forum_fill0_wght400_grad0_opsz48"
+                        android:src="@drawable/forum_fill0_wght400_grad0_opsz48"
+                        android:contentDescription="forum_fill0_wght400_grad0_opsz48"
+                        android:layout_marginStart="169dp"
+                        android:layout_marginTop="3dp"
+                        android:layout_width="38.9453125dp"
+                        android:layout_height="40dp" />
+
+
+                    <RelativeLayout android:id="@+id/___img__search_icon"
+                        android:layout_marginTop="3dp"
+                        android:layout_marginStart="79dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        >
+
+
+                        <RelativeLayout android:id="@+id/icon_action_search_24px"
+                            android:layout_marginTop="0dp"
+                            android:layout_marginStart="0dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            >
+
+
+                            <ImageView android:id="@+id/___color"
+                                android:src="@drawable/___colorv2"
+                                android:contentDescription="___color"
+                                android:layout_marginStart="3dp"
+                                android:layout_marginTop="3dp"
+                                android:layout_width="34dp"
+                                android:layout_height="34dp" />
+
+                        </RelativeLayout>
+
+                    </RelativeLayout>
+
+                    <ImageView android:id="@+id/ic_location_on_24px"
+                        android:src="@drawable/ic_location_on_24px_v2"
+                        android:contentDescription="ic_location_on_24px"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:layout_width="28.817138671875dp"
+                        android:layout_height="41.970458984375dp" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:id="@+id/view_button"
+                android:layout_marginTop="704dp"
+                android:layout_marginStart="200dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+
+                <RelativeLayout android:id="@+id/container"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    >
+
+                    <View
+                        android:id="@+id/____color_l_container"
+                        android:layout_width="86dp"
+                        android:layout_height="37dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/____color_l_container_shape" />
+
+                </RelativeLayout>
+
+                <TextView android:id="@+id/____label_ek1"
+                    android:fontFamily="@font/arialn"
+                    android:textSize="16sp"
+                    android:textColor="@color/____label_ek1_color"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_width="48dp"
+                    android:layout_height="28dp"
+                    android:text="@string/____label_ek1_string"
+                    />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout android:id="@+id/clear_button"
+                android:layout_marginTop="704dp"
+                android:layout_marginStart="106dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+
+                <RelativeLayout android:id="@+id/container_ek1"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginStart="0dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" >
+
+                    <View
+                        android:id="@+id/____color_l_container_ek1"
+                        android:layout_width="86dp"
+                        android:layout_height="37dp"
+                        android:layout_marginStart="0dp"
+                        android:layout_marginTop="0dp"
+                        android:background="@drawable/____color_l_container_ek1_shape" />
+
+                </RelativeLayout>
+
+                <TextView android:id="@+id/____label_ek2"
+                    android:fontFamily="@font/arialn"
+                    android:textSize="16sp"
+                    android:textColor="@color/____label_ek1_color"
+                    android:layout_marginLeft="23dp"
+                    android:layout_marginTop="9dp"
+                    android:layout_width="52dp"
+                    android:layout_height="28dp"
+                    android:text="@string/____label_ek2_string"
+                    />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+</HorizontalScrollView>

@@ -25,4 +25,28 @@
     <color name="sign_in_color">#544844</color>
     <color name="tenant_color">#4c433e</color>
 
+    <color name="_bg__map_color">#817c78</color>
+    <color name="boundary_color">#ffffff</color>
+    <color name="ellipse_19_color">#cc9d59</color>
+
+    <color name="_bg__search___1_color">#d0cec9</color>
+    <color name="______container_l_color_color">#e4e3de</color>
+    <color name="rectangle_1_color">#817c78</color>
+    <color name="____color_l_container_color">#4c433e</color>
+    <color name="____label_ek1_color">#e4e3de</color>
+
+    <color name="___states_color">#e4e3de</color>
+    <color name="nobs_color">#4c433e</color>
+    <color name="____label_color">#4c433e</color>
+
+    <color name="_bg__chats_color">#d0cec9</color>
+    <color name="______container_l_color_ek1_color">#e4e3de</color>
+    <color name="search_messages_color">#493f3b</color>
+
+    <color name="_bg__chats_cont_color">#d0cec9</color>
+    <color name="base_ek1_color">#cc9d59</color>
+
+    <color name="_bg__settings___1_color">#d0cec9</color>
+    <color name="____input_text_color">#4c433e</color>
+    <color name="____label_ek5_color">#e4e3de</color>
 </resources>
