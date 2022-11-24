@@ -3,11 +3,13 @@ package com.example.testapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 
 import com.google.android.material.slider.RangeSlider;
+import com.google.android.material.slider.Slider;
 
 public class Search extends AppCompatActivity {
 
@@ -49,8 +51,9 @@ public class Search extends AppCompatActivity {
             //Done Checkboxes
 
             //Buttons
-            Button clear = findViewById(R.id.clear_button);
-            Button search = findViewById(R.id.search);
+            View clear = findViewById(R.id.clear_button);
+            View search = findViewById(R.id.search);
             //Done buttons
+        //Done Instantiation
     }
 }

@@ -1235,13 +1235,13 @@
                     android:layout_height="wrap_content"
                     >
 
-                    <Button
+                    <View
                         android:id="@+id/search"
                         android:layout_width="86dp"
                         android:layout_height="37dp"
                         android:layout_marginStart="0dp"
                         android:layout_marginTop="0dp"
-                        android:backgroundTint="@drawable/____color_l_container_shape" />
+                        android:background="@drawable/____color_l_container_shape" />
 
                 </RelativeLayout>
 
@@ -1272,13 +1272,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" >
 
-                    <Button
+                    <View
                         android:id="@+id/clear_button"
                         android:layout_width="86dp"
                         android:layout_height="37dp"
                         android:layout_marginStart="0dp"
                         android:layout_marginTop="0dp"
-                        android:backgroundTint="@drawable/____color_l_container_ek1_shape" />
+                        android:background="@drawable/____color_l_container_ek1_shape" />
 
                 </RelativeLayout>
 
