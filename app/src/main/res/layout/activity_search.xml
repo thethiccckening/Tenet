@@ -1170,13 +1170,14 @@
                         android:layout_width="40.965576171875dp"
                         android:layout_height="40dp" />
 
-                    <ImageView android:id="@+id/forum_fill0_wght400_grad0_opsz48"
-                        android:src="@drawable/forum_fill0_wght400_grad0_opsz48"
-                        android:contentDescription="forum_fill0_wght400_grad0_opsz48"
+                    <ImageView
+                        android:id="@+id/forum_fill0_wght400_grad0_opsz48"
+                        android:layout_width="38.9453125dp"
+                        android:layout_height="40dp"
                         android:layout_marginStart="169dp"
                         android:layout_marginTop="3dp"
-                        android:layout_width="38.9453125dp"
-                        android:layout_height="40dp" />
+                        android:contentDescription="forum_fill0_wght400_grad0_opsz48"
+                        android:src="@drawable/forum_fill0_wght400_grad0_opsz48" />
 
 
                     <RelativeLayout android:id="@+id/___img__search_icon"
