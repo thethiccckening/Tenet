@@ -15,8 +15,8 @@
 
             <View
                 android:id="@+id/_bg__settings___1"
-                android:layout_width="393dp"
-                android:layout_height="829dp"
+                android:layout_width="match_parent"
+                android:layout_height="812dp"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="0dp"
                 android:background="@drawable/_bg__settings___1_shape" />

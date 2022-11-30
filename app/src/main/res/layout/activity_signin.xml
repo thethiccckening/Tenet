@@ -51,7 +51,7 @@
                 android:background="@drawable/base_ek1_shape" />
 
             <EditText
-                android:id="@+id/email_or_phone_number"
+                android:id="@+id/signupSource"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="62dp"
@@ -114,7 +114,7 @@
 
 
             <TextView
-                android:id="@+id/sign_in"
+                android:id="@+id/signinAction"
                 android:layout_width="85dp"
                 android:layout_height="44dp"
                 android:layout_gravity="center_horizontal|center"
@@ -136,7 +136,7 @@
                 android:layout_marginTop="729dp"
                 android:background="@drawable/base_ek2_shapev2" />
 
-            <TextView android:id="@+id/sign_up"
+            <TextView android:id="@+id/signupAction"
                 android:fontFamily="@font/arialn"
                 android:textStyle="bold"
                 android:layout_gravity="center_horizontal|center"
