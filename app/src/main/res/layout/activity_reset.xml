@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    tools:context=".ResetActivity">
+
+    <TextView
+        android:id="@+id/username_reset_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="20dp"
+        android:text="New Password" />
+
+    <EditText
+        android:id="@+id/passwordResetSource"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="password"
+        android:inputType="textPersonName"
+        android:layout_below="@id/username_reset_text" />
+
+    <EditText
+        android:id="@+id/passwordResetSource2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:hint="Retype password"
+        android:inputType="textPersonName"
+        android:layout_below="@id/passwordResetSource" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/passwordResetSource2"
+        android:text="Confirm"
+        android:textSize="20dp"/>
+
+
+</RelativeLayout>

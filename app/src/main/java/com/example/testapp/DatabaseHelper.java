@@ -21,7 +21,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     //VARIABLES
     public final static String TABLE_NAME = "AccountReg";
     public final static String KEY_ID = "ID";
-    public final static String KEY_USERNAME = "userName";
+    public final static String KEY_USERNAME = "username";
     public final static String KEY_PASSWORD = "passWord";
 
     //creating the query
@@ -103,6 +103,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else{
             return false;
         }
+    }
+
+    public Boolean updatePassword(String username, String password){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("password", password);
+
+        long result = db.update(TABLE_NAME, contentValues, "username = ?", new String[] {username});
+        readData();
+
+        if(result == -1){
+            return false;
+        }
+        else{
+
+            return true;
+        }
+
     }
 
 
