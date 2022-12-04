@@ -11,13 +11,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" >
 
-            <View   android:id="@+id/_bg__chats"
-                android:background="@drawable/_bg__chats_shape"
+
+            <View
+                android:id="@+id/_bg__chats"
+                android:layout_width="393dp"
+                android:layout_height="829dp"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="0dp"
-                android:layout_width="393dp"
-                android:layout_height="829dp" />
-
+                android:background="@drawable/_bg__chats_shape" />
 
             <RelativeLayout android:id="@+id/navigation_bar"
                 android:layout_marginTop="756dp"
@@ -266,6 +267,13 @@
                     android:textSize="16sp" />
 
             </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/UserMessages"
+                android:layout_width="380dp"
+                android:layout_height="201dp"
+                android:layout_below="@id/search_message_textbox"
+                android:layout_marginTop="192dp" />
 
         </RelativeLayout>
 
