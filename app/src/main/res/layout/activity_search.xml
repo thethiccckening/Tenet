@@ -59,7 +59,7 @@
                     android:background="@drawable/______container_l_color_shape" />
 
                 <EditText
-                    android:id="@+id/____input_text"
+                    android:id="@+id/city"
                     android:layout_width="117dp"
                     android:layout_height="28dp"
                     android:layout_marginLeft="17dp"
@@ -121,7 +121,7 @@
                         android:background="@drawable/______container_l_color_shape" />
 
                     <EditText
-                        android:id="@+id/____label_priceslider"
+                        android:id="@+id/priceSliderleft"
                         android:layout_width="30dp"
                         android:layout_height="27.5dp"
                         android:layout_marginLeft="12dp"
@@ -138,7 +138,7 @@
                 <!-- Discrete slider -->
 
                 <com.google.android.material.slider.RangeSlider
-                    android:id="@+id/discretepriceRangeSlider"
+                    android:id="@+id/priceSlider"
                     style="@style/Widget.App.Slider"
                     android:layout_width="260dp"
                     android:layout_height="wrap_content"
@@ -167,7 +167,7 @@
                         android:background="@drawable/______container_l_color_ek1_shape" />
 
                     <EditText
-                        android:id="@+id/____label_ek1_priceslider"
+                        android:id="@+id/priceSliderright"
                         android:layout_width="66dp"
                         android:layout_height="27.5dp"
                         android:layout_marginLeft="12dp"
@@ -231,7 +231,7 @@
                         android:background="@drawable/______container_l_color_shape" />
 
                     <EditText
-                        android:id="@+id/____label_bedroomslider"
+                        android:id="@+id/roomSliderleft"
                         android:layout_width="30dp"
                         android:layout_height="27.5dp"
                         android:layout_marginLeft="12dp"
@@ -248,7 +248,7 @@
                 <!-- Discrete slider -->
 
                 <com.google.android.material.slider.RangeSlider
-                    android:id="@+id/discretebedroomRangeSlider"
+                    android:id="@+id/roomSlider"
                     style="@style/Widget.App.Slider"
                     android:layout_width="260dp"
                     android:layout_height="wrap_content"
@@ -277,7 +277,7 @@
                         android:background="@drawable/______container_l_color_ek1_shape" />
 
                     <EditText
-                        android:id="@+id/____label_ek1_bedroomslider"
+                        android:id="@+id/roomSliderright"
                         android:layout_width="66dp"
                         android:layout_height="27.5dp"
                         android:layout_marginLeft="12dp"
@@ -342,7 +342,7 @@
                         android:background="@drawable/______container_l_color_shape" />
 
                     <EditText
-                        android:id="@+id/____label_bathroomslider"
+                        android:id="@+id/bathSliderleft"
                         android:layout_width="30dp"
                         android:layout_height="27.5dp"
                         android:layout_marginLeft="12dp"
@@ -359,7 +359,7 @@
                 <!-- Discrete slider -->
 
                 <com.google.android.material.slider.RangeSlider
-                    android:id="@+id/discretebathroomRangeSlider"
+                    android:id="@+id/bathSlider"
                     style="@style/Widget.App.Slider"
                     android:layout_width="260dp"
                     android:layout_height="wrap_content"
@@ -388,7 +388,7 @@
                         android:background="@drawable/______container_l_color_ek1_shape" />
 
                     <EditText
-                        android:id="@+id/____label_ek1_bathroomslider"
+                        android:id="@+id/bathSliderright"
                         android:layout_width="66dp"
                         android:layout_height="27.5dp"
                         android:layout_marginLeft="12dp"
@@ -453,7 +453,7 @@
                         android:background="@drawable/______container_l_color_shape" />
 
                     <EditText
-                        android:id="@+id/____label_parkingslider"
+                        android:id="@+id/parkSliderleft"
                         android:layout_width="30dp"
                         android:layout_height="27.5dp"
                         android:layout_marginLeft="12dp"
@@ -470,7 +470,7 @@
                 <!-- Discrete slider -->
 
                 <com.google.android.material.slider.RangeSlider
-                    android:id="@+id/discreteparkingRangeSlider"
+                    android:id="@+id/parkSlider"
                     style="@style/Widget.App.Slider"
                     android:layout_width="260dp"
                     android:layout_height="wrap_content"
@@ -499,7 +499,7 @@
                         android:background="@drawable/______container_l_color_ek1_shape" />
 
                     <EditText
-                        android:id="@+id/____label_ek1_parkinglider"
+                        android:id="@+id/parkSliderright"
                         android:layout_width="66dp"
                         android:layout_height="27.5dp"
                         android:layout_marginLeft="12dp"
@@ -1170,13 +1170,14 @@
                         android:layout_width="40.965576171875dp"
                         android:layout_height="40dp" />
 
-                    <ImageView android:id="@+id/forum_fill0_wght400_grad0_opsz48"
-                        android:src="@drawable/forum_fill0_wght400_grad0_opsz48"
-                        android:contentDescription="forum_fill0_wght400_grad0_opsz48"
+                    <ImageView
+                        android:id="@+id/forum_fill0_wght400_grad0_opsz48"
+                        android:layout_width="38.9453125dp"
+                        android:layout_height="40dp"
                         android:layout_marginStart="169dp"
                         android:layout_marginTop="3dp"
-                        android:layout_width="38.9453125dp"
-                        android:layout_height="40dp" />
+                        android:contentDescription="forum_fill0_wght400_grad0_opsz48"
+                        android:src="@drawable/forum_fill0_wght400_grad0_opsz48" />
 
 
                     <RelativeLayout android:id="@+id/___img__search_icon"
@@ -1236,7 +1237,7 @@
                     >
 
                     <View
-                        android:id="@+id/____color_l_container"
+                        android:id="@+id/search"
                         android:layout_width="86dp"
                         android:layout_height="37dp"
                         android:layout_marginStart="0dp"
@@ -1259,7 +1260,7 @@
             </RelativeLayout>
 
 
-            <RelativeLayout android:id="@+id/clear_button"
+            <RelativeLayout android:id="@+id/clear"
                 android:layout_marginTop="704dp"
                 android:layout_marginStart="106dp"
                 android:layout_width="wrap_content"
@@ -1273,7 +1274,7 @@
                     android:layout_height="wrap_content" >
 
                     <View
-                        android:id="@+id/____color_l_container_ek1"
+                        android:id="@+id/clear_button"
                         android:layout_width="86dp"
                         android:layout_height="37dp"
                         android:layout_marginStart="0dp"
