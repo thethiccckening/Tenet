@@ -187,7 +187,7 @@
 
                 </RelativeLayout>
 
-                <TextView android:id="@+id/____input_text_ek1"
+                <TextView android:id="@+id/emailSource"
                     android:fontFamily="@font/arialn"
                     android:textSize="16sp"
                     android:textColor="@color/tenet_color"
