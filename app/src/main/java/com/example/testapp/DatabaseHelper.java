@@ -32,6 +32,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + " TEXT, " + KEY_EMAIL
             + " TEXT, " + KEY_PASSWORD
             + " TEXT);";
+    public static final String TABLE_Of_My_ITEMS = "MessageLog";
+    public static String KEY_ID_MESSAGE ="MESSAGE_NUMBER";
+    public static final String KEY_MESSAGE = "MESSAGES";
+    public static final String KEY_SENT_TO = "SENT_TO";
+    public static final String KEY_SENT_BY = "SENT_BY";
+    public static final String KEY_CONVO_ID = "CONVERSATION_ID";
+    private static final String DATABASE_CREATE2 = "create table "
+            + TABLE_Of_My_ITEMS + " ( " + KEY_ID_MESSAGE
+            + " integer primary key autoincrement, " + KEY_MESSAGE
+            + " text not null, "
+            + KEY_SENT_TO+ " text not null, "
+            + KEY_SENT_BY+ " text not null, "
+            + KEY_CONVO_ID+ " integer not null "+");";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_Version);
@@ -40,12 +53,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(DATABASE_CREATE);
-
+        db.execSQL(DATABASE_CREATE2);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("drop table if exists " + TABLE_NAME);
+
     }
 
     //insert data
