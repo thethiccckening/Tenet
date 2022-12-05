@@ -35,11 +35,6 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        Bundle bundle = new Bundle();
-        getSupportFragmentManager().beginTransaction()
-                .add(R.id.navigation_bar,ToolbarFragment.class,bundle)
-                .commit();
-
         username = findViewById(R.id.emailSource);
         password = findViewById(R.id.passwordETsource);
 
@@ -112,7 +107,6 @@ public class Settings extends AppCompatActivity {
             Toast.makeText(Settings.this, toastMsg10, Toast.LENGTH_SHORT).show();
             return;
         }
-
         StringBuffer buffer = new StringBuffer();
         while (res.moveToNext()){
             buffer.append("Email: " +res.getString(2)+"\n");
