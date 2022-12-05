@@ -73,9 +73,8 @@
                         android:layout_width="34dp"
                         android:layout_height="34dp"
                         android:layout_marginStart="3dp"
-                        android:layout_marginTop="3dp"
                         android:contentDescription="___color"
-                        android:src="@drawable/___colorv2" />
+                        android:src="@drawable/___color" />
 
                 </RelativeLayout>
 

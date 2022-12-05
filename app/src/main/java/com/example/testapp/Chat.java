@@ -25,6 +25,11 @@ public class Chat extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
+        Bundle bundle = new Bundle();
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.navigation_bar,ToolbarFragment.class,bundle)
+                .commit();
+
     }
     public void onClickSearch(View view){
         Intent intent = new Intent(this, Search.class);

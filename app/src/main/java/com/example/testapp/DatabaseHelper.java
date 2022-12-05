@@ -1,18 +1,20 @@
 package com.example.testapp;
 
 import android.annotation.SuppressLint;
+import android.app.ProgressDialog;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.os.AsyncTask;
 import android.util.Log;
 
 import androidx.annotation.Nullable;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-    protected static final String ACTIVITY_NAME = "LoginActivity"; //debugging message
+    protected static final String ACTIVITY_NAME = "DatabaseActivity"; //debugging message
 
     //DB Name and Version
     public static final String DATABASE_NAME = "tenetLogin.db";
@@ -25,13 +27,53 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public final static String KEY_EMAIL = "email";
     public final static String KEY_PASSWORD = "passWord";
 
+    public static final  String HOUSING_TABLE_NAME = "Housing";
+    public static final  String HOUSING_KEY_ID = "ID";
+    public static final  String HOUSING_NAME = "Name";
+    public static final String HOUSING_DESCRIPTION = "Description";
+    public static final String HOUSING_CITY ="City";
+    public static final String HOUSING_STATE = "State";
+    public static final String HOUSING_COUNTRY = "Country" ;
+    public static final String HOUSING_LAT = "Latitude" ;
+    public static final String HOUSING_LONG = "Longitude" ;
+    public static final String HOUSING_TYPE = "Type";
+    public static final String HOUSING_PRICE = "Price";
+    public static final String HOUSING_BEDROOM = "Bedroom";
+    public static final String HOUSING_BATHROOM = "Bathroom";
+    public static final String HOUSING_AMENITIES = "Amenities" ;
+    public static final String HOUSING_UTILITIES = "Utilities";
+    public static final String HOUSING_PARKING = "Parking";
+    public  static final String HOUSING_Address = "Address";
+
     //creating the query
-    private static final String DATABASE_CREATE = "create table "
+    private static final String DATABASE_CREATE = "CREATE TABLE IF NOT EXISTS "
             + TABLE_NAME + " (" + KEY_ID
             + " integer primary key autoincrement, " + KEY_USERNAME
             + " TEXT, " + KEY_EMAIL
             + " TEXT, " + KEY_PASSWORD
             + " TEXT);";
+
+    //String address_url = "https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={API_KEY}";
+
+    // Housing query
+    private static final String DATABASE_CREATE_HOUSING =  "CREATE TABLE IF NOT EXISTS "
+            + HOUSING_TABLE_NAME+ " ("
+            + HOUSING_KEY_ID + " integer primary key autoincrement, "
+            + HOUSING_NAME+  " TEXT, "
+            + HOUSING_DESCRIPTION+ " TEXT, "
+            + HOUSING_CITY + " TEXT, "
+            + HOUSING_STATE + " TEXT, "
+            + HOUSING_COUNTRY + " TEXT, "
+            + HOUSING_LAT + " TEXT, "
+            + HOUSING_LONG + " TEXT, "
+            + HOUSING_Address + " TEXT, "
+            + HOUSING_PRICE + " REAL, "
+            + HOUSING_BEDROOM + " integer, "
+            + HOUSING_BATHROOM + " integer, "
+            + HOUSING_PARKING + " integer, "
+            + HOUSING_UTILITIES + " TEXT, "
+            + HOUSING_AMENITIES + " TEXT, "
+            + HOUSING_TYPE + " TEXT);";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_Version);
@@ -41,11 +83,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(DATABASE_CREATE);
 
+        //temporary.
+       // db.execSQL("drop table if exists " + HOUSING_TABLE_NAME);
+        db.execSQL(DATABASE_CREATE_HOUSING);
+        //insertDummydata();
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int i, int i1) {
         db.execSQL("drop table if exists " + TABLE_NAME);
+        db.execSQL("drop table if exists " + HOUSING_TABLE_NAME);
+
+        onCreate(db);
     }
 
     //insert data
@@ -57,7 +107,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("password", password);
 
         long result = db.insert(TABLE_NAME, null, contentValues);
-        readData();
 
         if(result == -1){
             return false;
@@ -80,7 +129,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
             long result = db.update(TABLE_NAME, contentValues, "name=?", new String[]{email});
-            readData();
 
             if (result == -1) {
                 return false;
@@ -99,7 +147,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery("Select * from AccountReg where email = ?", new String[] {email});
         if(cursor.getCount() >0) {
             long result = db.delete(TABLE_NAME,"name=?", new String[]{email});
-            readData();
 
             if (result == -1) {
                 return false;
@@ -188,7 +235,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("password", password);
 
         long result = db.update(TABLE_NAME, contentValues, "username = ?", new String[] {username});
-        readData();
 
         if(result == -1){
             return false;
@@ -201,6 +247,47 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
+
+    @SuppressLint("Range")
+    public Cursor readpreferredHousingData(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursorhousing = db.rawQuery("SELECT * FROM " + HOUSING_TABLE_NAME, null);
+
+        return cursorhousing;
+    }
+
+
+
+
+    private class AsyncTaskRunner extends AsyncTask<String, String, String> {
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+              //  insertDummydata();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return "";
+        }
+
+
+        @Override
+        protected void onPostExecute(String result) {
+            // execution of result of Long time consuming operation
+        }
+
+
+        @Override
+        protected void onPreExecute() {
+
+        }
+
+
+        @Override
+        protected void onProgressUpdate(String... text) {
+
+        }
+    }
 
 
 }
