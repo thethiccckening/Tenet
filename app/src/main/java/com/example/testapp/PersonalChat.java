@@ -62,6 +62,7 @@ public class PersonalChat extends AppCompatActivity {
 
                 chatHistory.add(message);
 
+
                 ContentValues value = new ContentValues();
                 value.put(ChatDatabaseHelper.KEY_MESSAGE,message);
                 value.put(ChatDatabaseHelper.KEY_SENT_BY,UserID);

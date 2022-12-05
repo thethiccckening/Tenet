@@ -66,7 +66,6 @@ public class Chat extends AppCompatActivity {
     public ArrayList<Conversations> readConvos(SQLiteDatabase db){
 
         Cursor point = db.rawQuery("select * from " + DatabaseHelper.TABLE_Of_My_ITEMS + " where "+DatabaseHelper.KEY_CONVO_ID + " in( select distinct " + DatabaseHelper.KEY_CONVO_ID + " from " + DatabaseHelper.TABLE_Of_My_ITEMS+")",null);
-
         ArrayList<Conversations> convos = new ArrayList<Conversations>();
         if(point.getCount()>=0){
             point.moveToFirst();
