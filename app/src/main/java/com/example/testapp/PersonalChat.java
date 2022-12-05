@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -17,6 +18,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -42,12 +44,34 @@ public class PersonalChat extends AppCompatActivity {
         Intent i = getIntent();
         UserID = i.getStringExtra("username");
         OtherID = i.getStringExtra("convoID");
-
-
+        Bundle bundle = new Bundle();
+        getSupportFragmentManager().beginTransaction()
+        .add(R.id.navigation_bar,ToolbarFragment.class,bundle)
+        .commit();
+        ImageView img = findViewById(R.id.down_ek1);
         addMessages(UserID, OtherID);
         ConvoAdapter list = new ConvoAdapter(this);
-
+        TextView textView = findViewById(R.id.____label);
+        textView.setText(OtherID);
         listView.setAdapter(list);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String message = chatField.getText().toString().trim();
+
+
+                chatHistory.add(message);
+
+                ContentValues value = new ContentValues();
+                value.put(ChatDatabaseHelper.KEY_MESSAGE,message);
+                value.put(ChatDatabaseHelper.KEY_SENT_BY,UserID);
+                value.put(ChatDatabaseHelper.KEY_SENT_TO,OtherID);
+                BaseHolder.insert(ChatDatabaseHelper.TABLE_Of_My_ITEMS,null,value);
+                list.notifyDataSetChanged();
+                chatField.setText("");
+            }
+        });
+
 
     }
 
@@ -113,4 +137,6 @@ public class PersonalChat extends AppCompatActivity {
 
 
     }
+
+
 }

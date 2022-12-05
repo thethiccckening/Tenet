@@ -1,5 +1,6 @@
 package com.example.testapp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -15,6 +16,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -39,6 +41,10 @@ public class Chat extends AppCompatActivity {
         ChatDatabaseHelper tempBase = new ChatDatabaseHelper(this);
         BaseHolder = tempBase.getWritableDatabase();
         ChatAdapter convos = new ChatAdapter(readConvos(BaseHolder));
+        Bundle bundle = new Bundle();
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.navigation_bar,ToolbarFragment.class,bundle)
+                .commit();
     }
     public void onClickSearch(View view){
         Intent intent = new Intent(this, Search.class);
@@ -59,8 +65,8 @@ public class Chat extends AppCompatActivity {
     @SuppressLint("Range")
     public ArrayList<Conversations> readConvos(SQLiteDatabase db){
 
-        Cursor point = db.rawQuery("select * from "+ChatDatabaseHelper.TABLE_Of_My_ITEMS+" where "+ChatDatabaseHelper.KEY_CONVO_ID +" in( select distinct ChatDatabaseHelper.KEY_CONVO_ID from ChatDatabaseHelper.Table_Of_My_ITEMS) OR "
-                +ChatDatabaseHelper.KEY_SENT_BY+"=?",new String[]{UserID,UserID});
+        Cursor point = db.rawQuery("select * from "+ChatDatabaseHelper.TABLE_Of_My_ITEMS+" where "+ChatDatabaseHelper.KEY_CONVO_ID +" in( select distinct ChatDatabaseHelper.KEY_CONVO_ID from ChatDatabaseHelper.Table_Of_My_ITEMS)"
+                ,new String[]{UserID,UserID});
         ArrayList<Conversations> convos = new ArrayList<Conversations>();
         if(point.getCount()>=0){
             point.moveToFirst();

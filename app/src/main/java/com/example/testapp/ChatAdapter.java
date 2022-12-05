@@ -1,6 +1,9 @@
 package com.example.testapp;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -44,6 +47,7 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
 
         contactView = inflater.inflate(R.layout.chat_conversation, parent, false);
         ViewHolder viewHolder = new ViewHolder(contactView);
+
         return viewHolder;
     }
 
@@ -54,6 +58,15 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatAdapter.ViewHolder> {
         textView.setText(convo.lastconvo);
         TextView ConvoName = holder.contactName;
         ConvoName.setText(convo.convoName);
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(view.getContext(),PersonalChat.class);
+                intent.putExtra("username",Signin.test);
+                intent.putExtra("convoID",convo.convoName);
+                startActivity(view.getContext(),intent,null);
+            }
+        });
     }
 
 
