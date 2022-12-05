@@ -6,12 +6,26 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class Settings extends AppCompatActivity {
+
+    EditText username, password;
+
+    String email;
+
+    Signup signupOb = new Signup();
+
+    Signin signinOb = new Signin();
+
+    //db helper
+    DatabaseHelper db;
+
 
     //debugging
     protected static final String ACTIVITY_NAME = "LoginActivity"; //debugging message
@@ -20,9 +34,24 @@ public class Settings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-        Intent intent = getIntent();
-        String email = intent.getStringExtra("");
-        String username = Signin.test;
+
+        username = findViewById(R.id.emailSource);
+        password = findViewById(R.id.passwordETsource);
+
+        if(!signupOb.userVar.isEmpty()){
+            username.setText(signupOb.userVar);
+            password.setText(signupOb.passVar);
+        }
+        else{
+            username.setText(signinOb.userVar);
+            password.setText(signinOb.passVar);
+        }
+
+        email = db.getUserEmail(username.getText().toString());
+
+        //init db
+        db = new DatabaseHelper(this);
+
     }
 
     @Override
@@ -56,14 +85,42 @@ public class Settings extends AppCompatActivity {
     }
 
     public void doneEvent(View view){
-        String toastMsg4 = "done";
-        Toast.makeText(Settings.this, toastMsg4, Toast.LENGTH_SHORT).show();
+        String toastMsg4 = "Entry Updated !";
+        String toastMsg5 = "Entry not Updated !";
+
+
+        String usernameUpdate = username.getText().toString();
+        String passwordUpdate = password.getText().toString();
+
+        Boolean updateData = db.updateData(email, usernameUpdate, passwordUpdate);
+        if(updateData == true){
+            Toast.makeText(Settings.this, toastMsg4, Toast.LENGTH_SHORT).show();
+        }
+        else{
+            Toast.makeText(Settings.this, toastMsg5, Toast.LENGTH_SHORT).show();
+        }
 
     }
 
     public void viewEvent(View view){
-        String toastMsg10 = "View";
-        Toast.makeText(Settings.this, toastMsg10, Toast.LENGTH_SHORT).show();
+        String toastMsg10 = "No Entries exists";
+        Cursor res = db.getData();
+        if(res.getCount() == 0){
+            Toast.makeText(Settings.this, toastMsg10, Toast.LENGTH_SHORT).show();
+            return;
+        }
+        StringBuffer buffer = new StringBuffer();
+        while (res.moveToNext()){
+            buffer.append("Email: " +res.getString(0)+"\n");
+            buffer.append("Username: " +res.getString(1)+"\n");
+            buffer.append("Password: " +res.getString(1)+"\n\n");
+        }
+
+        AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
+        builder.setTitle("User info");
+        builder.setCancelable(true);
+        builder.setMessage(buffer.toString());
+        builder.show();
 
     }
 
@@ -85,6 +142,11 @@ public class Settings extends AppCompatActivity {
         builder.setNegativeButton(R.string.DialogCancel, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
+                String toastMsg4 = getString(R.string.toastSigninWelcome);
+                Toast.makeText(Settings.this, toastMsg4, Toast.LENGTH_SHORT).show();
+
+                Intent intentSignIn = new Intent(Settings.this, Signin.class);
+                startActivity(intentSignIn);
                 finish();
             }
         });

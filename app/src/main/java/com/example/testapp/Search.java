@@ -3,27 +3,30 @@ package com.example.testapp;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 
 import com.google.android.material.slider.RangeSlider;
-import com.google.android.material.slider.Slider;
 
-public class Search extends Activity {
+public class Search extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
+        //Perform fragment transaction to bring up toolbar
+        Bundle bundle = new Bundle();
+        getSupportFragmentManager().beginTransaction()
+        .add(R.id.navigation_bar,ToolbarFragment.class,bundle)
+        .commit();
+        //Fragment transaction complete
         //Instantiate all views into usable java objects
             //EditTexts
             EditText city = findViewById(R.id.city);

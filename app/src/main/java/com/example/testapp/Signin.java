@@ -13,6 +13,10 @@ import android.widget.Toast;
 
 public class Signin extends AppCompatActivity {
 
+    //globsl
+    public static String emailVar, userVar,passVar;
+
+
     //debugging
     protected static final String ACTIVITY_NAME = "LoginActivity"; //debugging message
 
@@ -44,20 +48,6 @@ public class Signin extends AppCompatActivity {
 
         //init database
         db = new DatabaseHelper(this);
-
-
-//        forgotPass.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String toastMsg4 = "SignUp Welcomee";
-//                Toast.makeText(Signin.this, toastMsg4, Toast.LENGTH_SHORT).show();
-//                //opening SignUp Activity
-//                Intent intentPassword = new Intent(Signin.this, Password.class);
-//                startActivity(intentPassword);
-//            }
-//        });
-
-
 
     }
 
@@ -93,8 +83,8 @@ public class Signin extends AppCompatActivity {
 
     public void signInEvent(View view) {
         //storing user/pass source into strings
-        String userVar = loginText.getText().toString();
-        String passVar = passwordText.getText().toString();
+        userVar = loginText.getText().toString();
+        passVar = passwordText.getText().toString();
 
         //string for toasts
         String toastMsg, toastMsg2, toastMsg3;
@@ -112,6 +102,7 @@ public class Signin extends AppCompatActivity {
                 test = userVar;
                 //starting the Search Activity after the user and pass have been added to db
                 Intent intentSearch = new Intent(Signin.this, Search.class);
+                intentSearch.putExtra("username", userVar);
                 startActivity(intentSearch);
             }
             else{
@@ -136,5 +127,11 @@ public class Signin extends AppCompatActivity {
 
         Intent intentPassword = new Intent(Signin.this, Password.class);
         startActivity(intentPassword);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+//        Not calling super, disables back button in current screen.
     }
 }

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <RelativeLayout android:id="@+id/navigation_bar"
-        android:layout_marginTop="756dp"
-        android:layout_marginStart="-1dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" >
 
-
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".ToolbarFragment"
+    android:id="@+id/navigation_bar">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
         <RelativeLayout android:id="@+id/component_16___4"
             android:layout_marginTop="0dp"
             android:layout_marginStart="0dp"
@@ -33,16 +33,17 @@
             android:layout_height="wrap_content"
             >
 
-            <ImageView android:id="@+id/manage_accounts_fill0_wght400_grad0_opsz48"
-                android:src="@drawable/manage_accounts_fill0_wght400_grad0_opsz48"
-                android:contentDescription="manage_accounts_fill0_wght400_grad0_opsz48"
+            <ImageView
+                android:id="@+id/settings_button"
+                android:layout_width="40.965576171875dp"
+                android:layout_height="40dp"
                 android:layout_marginStart="258dp"
                 android:layout_marginTop="0dp"
-                android:layout_width="40.965576171875dp"
-                android:layout_height="40dp" />
+                android:contentDescription="manage_accounts_fill0_wght400_grad0_opsz48"
+                android:src="@drawable/manage_accounts_fill0_wght400_grad0_opsz48" />
 
             <ImageView
-                android:id="@+id/forum_fill0_wght400_grad0_opsz48"
+                android:id="@+id/chat_button"
                 android:layout_width="38.9453125dp"
                 android:layout_height="40dp"
                 android:layout_marginStart="169dp"
@@ -67,31 +68,32 @@
                     >
 
 
-                    <ImageView android:id="@+id/___color"
-                        android:src="@drawable/___colorv2"
-                        android:contentDescription="___color"
+                    <ImageView
+                        android:id="@+id/search_button"
+                        android:layout_width="34dp"
+                        android:layout_height="34dp"
                         android:layout_marginStart="3dp"
                         android:layout_marginTop="3dp"
-                        android:layout_width="34dp"
-                        android:layout_height="34dp" />
+                        android:contentDescription="___color"
+                        android:src="@drawable/___colorv2" />
 
                 </RelativeLayout>
 
             </RelativeLayout>
 
-            <ImageView android:id="@+id/ic_location_on_24px"
-                android:src="@drawable/ic_location_on_24px_v2"
-                android:contentDescription="ic_location_on_24px"
+            <ImageView
+                android:id="@+id/map_button"
+                android:layout_width="28.817138671875dp"
+                android:layout_height="41.970458984375dp"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="0dp"
-                android:layout_width="28.817138671875dp"
-                android:layout_height="41.970458984375dp" />
+                android:contentDescription="ic_location_on_24px"
+                android:src="@drawable/ic_location_on_24px_v2" />
 
         </RelativeLayout>
-
-    </RelativeLayout>
-
-
+    </FrameLayout>
+</RelativeLayout>
 
 
-</FrameLayout>
+
+
