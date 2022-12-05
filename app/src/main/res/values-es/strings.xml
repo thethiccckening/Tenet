@@ -13,6 +13,7 @@
     <string name="____label_string">Lugar</string>
     <string name="____label_ek1_string">Vista</string>
     <string name="____label_ek2_string">Borrar</string>
+    <string name="username_string">Entregar Username</string>
 
     <string name="____label_string_rpmin">$0</string>
     <string name="____label_ek1_string_rpmax">$5000</string>
@@ -69,5 +70,6 @@
     <!--    View button-->
     <string name="viewButtontxt">Ver</string>
     <string name="username2_string">Username</string>
+    <string name="usernameString">Entregar Username</string>
 
 </resources>

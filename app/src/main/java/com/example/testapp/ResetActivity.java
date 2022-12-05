@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class ResetActivity extends AppCompatActivity {
 
     //declaring variables
@@ -42,7 +44,7 @@ public class ResetActivity extends AppCompatActivity {
                 String rePass = reNewPass.getText().toString();
 
                 //toast
-                String toastMsg7 = "Passwords are not the same";
+                String snackbarMsg = "Passwords are not the same";
 
                 if (pass.equals(rePass)){
                     //toast
@@ -60,7 +62,6 @@ public class ResetActivity extends AppCompatActivity {
                     }
                 }
                 else{
-                    Toast.makeText(ResetActivity.this, toastMsg7, Toast.LENGTH_SHORT).show();
 
                 }
 

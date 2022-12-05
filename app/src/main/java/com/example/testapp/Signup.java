@@ -111,17 +111,12 @@ public class Signup extends AppCompatActivity {
             if(checkUser == false){
                 Boolean insertUser = db.insertData(emailVar,userVar, passVar);
                 if(insertUser == true){
-                    Toast.makeText(Signup.this, toastMsg2, Toast.LENGTH_SHORT).show();
 
                     //sending username to settings
                     Intent intentSettings = new Intent(Signup.this, Settings.class);
                     intentSettings.putExtra("email", emailVar);
 
                     //starting the SignIn Activity after the user and pass have been added to db
-                    String toastMsg0;
-                    toastMsg0 = "yea yea";
-                    Snackbar.make(view, toastMsg, Snackbar.LENGTH_LONG)
-                            .setAction("Action", null).show();
                     Intent intentSignIn = new Intent(Signup.this, Signin.class);
                     startActivity(intentSignIn);
 
