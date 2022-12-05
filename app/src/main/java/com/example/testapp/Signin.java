@@ -43,7 +43,7 @@ public class Signin extends AppCompatActivity {
         forgotPass = findViewById(R.id.forgotPassword);
 
         //init EditTexts for login and password
-        loginText = findViewById(R.id.signupSource);
+        loginText = findViewById(R.id.usernameSource);
         passwordText = findViewById(R.id.passwordSource2);
 
         //init database

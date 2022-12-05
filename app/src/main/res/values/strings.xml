@@ -71,5 +71,6 @@
 <!--    View button-->
     <string name="viewButtontxt">View</string>
     <string name="username2_string">Username</string>
+    <string name="usernameString">Enter Username</string>
 
 </resources>
