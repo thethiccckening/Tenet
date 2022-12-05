@@ -107,6 +107,7 @@ public class Settings extends AppCompatActivity {
             Toast.makeText(Settings.this, toastMsg10, Toast.LENGTH_SHORT).show();
             return;
         }
+
         StringBuffer buffer = new StringBuffer();
         while (res.moveToNext()){
             buffer.append("Email: " +res.getString(2)+"\n");

@@ -137,6 +137,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursorChats = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
 
+
         // moving our cursor to first position.
         if (cursorChats.moveToFirst()) {
             do {
