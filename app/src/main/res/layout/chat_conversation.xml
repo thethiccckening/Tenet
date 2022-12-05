@@ -63,17 +63,6 @@
 
         </RelativeLayout>
 
-        <TextView android:id="@+id/____input_text_ek1"
-            android:fontFamily="@font/arialn"
-            android:textSize="16sp"
-            android:textColor="@color/tenet_color"
-            android:layout_marginLeft="334dp"
-            android:layout_marginTop="36dp"
-            android:layout_width="47dp"
-            android:layout_height="28dp"
-            android:text="@string/____input_text_ek1_string"
-            />
-
 
         <RelativeLayout android:id="@+id/____avatar"
             android:layout_marginTop="28dp"
