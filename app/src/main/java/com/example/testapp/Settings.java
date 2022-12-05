@@ -19,6 +19,8 @@ public class Settings extends AppCompatActivity {
 
     String email;
 
+    Signup signupOb = new Signup();
+
     Signin signinOb = new Signin();
 
     //db helper
@@ -39,9 +41,12 @@ public class Settings extends AppCompatActivity {
         username.setText(signinOb.userVar);
         password.setText(signinOb.passVar);
 
-        email = db.getUserEmail(username.getText().toString());
+        email = signupOb.emailVar;
+
+//        email = db.getUserEmail(username.getText().toString());
         Log.i(ACTIVITY_NAME, username.getText().toString());
         Log.i(ACTIVITY_NAME, password.getText().toString());
+        Log.i(ACTIVITY_NAME, email);
 
         //init db for navbar
         db = new DatabaseHelper(this);
