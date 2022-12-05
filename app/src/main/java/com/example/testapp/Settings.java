@@ -20,6 +20,9 @@ public class Settings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
+        Intent intent = getIntent();
+        String email = intent.getStringExtra("");
+        String username = Signin.test;
     }
 
     @Override

@@ -293,7 +293,7 @@
                 android:layout_width="29dp"
                 android:layout_height="20dp" />
 
-            <androidx.recyclerview.widget.RecyclerView
+            <ListView
                 android:id="@+id/ChatList"
                 android:layout_width="320dp"
                 android:layout_height="503dp"
@@ -303,7 +303,8 @@
                 android:layout_centerVertical="true"
                 android:layout_marginStart="39dp"
                 android:layout_marginTop="12dp"
-                android:layout_marginEnd="36dp" />
+                android:layout_marginEnd="36dp"  />
+
 
         </RelativeLayout>
 
