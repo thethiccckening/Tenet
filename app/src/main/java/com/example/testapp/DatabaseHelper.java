@@ -79,7 +79,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if(cursor.getCount() >0) {
 
 
-            long result = db.update(TABLE_NAME, contentValues, "name=?", new String[]{email});
+            long result = db.update(TABLE_NAME, contentValues, "email=?", new String[]{email});
             readData();
 
             if (result == -1) {

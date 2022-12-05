@@ -43,10 +43,6 @@ public class Settings extends AppCompatActivity {
 
         email = signupOb.emailVar;
 
-//        email = db.getUserEmail(username.getText().toString());
-        Log.i(ACTIVITY_NAME, username.getText().toString());
-        Log.i(ACTIVITY_NAME, password.getText().toString());
-        Log.i(ACTIVITY_NAME, email);
 
         //init db for navbar
         db = new DatabaseHelper(this);
@@ -113,9 +109,9 @@ public class Settings extends AppCompatActivity {
         }
         StringBuffer buffer = new StringBuffer();
         while (res.moveToNext()){
-            buffer.append("Email: " +res.getString(0)+"\n");
+            buffer.append("Email: " +res.getString(2)+"\n");
             buffer.append("Username: " +res.getString(1)+"\n");
-            buffer.append("Password: " +res.getString(1)+"\n\n");
+            buffer.append("Password: " +res.getString(3)+"\n\n");
         }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
