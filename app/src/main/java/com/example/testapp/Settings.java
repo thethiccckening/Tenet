@@ -94,8 +94,6 @@ public class Settings extends AppCompatActivity {
         String usernameUpdate = username.getText().toString();
         String passwordUpdate = password.getText().toString();
 
-
-
         Boolean updateData = db.updateData(email, usernameUpdate, passwordUpdate);
         if(updateData == true){
             Toast.makeText(Settings.this, toastMsg4, Toast.LENGTH_SHORT).show();
@@ -117,7 +115,7 @@ public class Settings extends AppCompatActivity {
         while (res.moveToNext()){
             buffer.append("Email: " +res.getString(0)+"\n");
             buffer.append("Username: " +res.getString(1)+"\n");
-            buffer.append("Password: " +res.getString(2)+"\n\n");
+            buffer.append("Password: " +res.getString(1)+"\n\n");
         }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);

@@ -6,8 +6,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 public class ChatDatabaseHelper extends SQLiteOpenHelper {
-    private static String DATABASE_NAME = "User.db";
-    private static int VERSION_NUM = 2;
+    private static String DATABASE_NAME = "ConvoLog.db";
+    private static int VERSION_NUM = 1;
     public static final String TABLE_Of_My_ITEMS = "MessageLog";
     public static String KEY_ID ="MESSAGE_NUMBER";
     public static final String KEY_MESSAGE = "MESSAGES";

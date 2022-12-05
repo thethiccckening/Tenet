@@ -78,6 +78,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery("Select * from AccountReg where email = ?", new String[] {email});
         if(cursor.getCount() >0) {
 
+
             long result = db.update(TABLE_NAME, contentValues, "name=?", new String[]{email});
             readData();
 

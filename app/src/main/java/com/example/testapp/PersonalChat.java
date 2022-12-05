@@ -28,7 +28,7 @@ import java.util.ArrayList;
 public class PersonalChat extends AppCompatActivity {
     private ArrayList<String> chatHistory = new ArrayList<String>();
     SQLiteDatabase BaseHolder;
-    String[] allItems = new String[]{String.valueOf(ChatDatabaseHelper.KEY_ID), ChatDatabaseHelper.KEY_MESSAGE};
+    String[] allItems = new String[]{String.valueOf(DatabaseHelper.KEY_ID), ChatDatabaseHelper.KEY_MESSAGE};
     Cursor pointer;
     String UserID;
     String OtherID;
@@ -37,7 +37,7 @@ public class PersonalChat extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_personal_chat);
-        ChatDatabaseHelper tempBase = new ChatDatabaseHelper(this);
+        DatabaseHelper tempBase = new DatabaseHelper(this);
         BaseHolder = tempBase.getWritableDatabase();
         ListView listView = findViewById(R.id.ChatList);
         EditText chatField = findViewById(R.id.search_messages);

@@ -38,8 +38,8 @@ public class Chat extends AppCompatActivity {
         UserID = Signin.test;
         RecyclerView recycleView = findViewById(R.id.UserMessages);
 
-        ChatDatabaseHelper tempBase = new ChatDatabaseHelper(this);
-        BaseHolder = tempBase.getWritableDatabase();
+        DatabaseHelper tempBase = new DatabaseHelper(this);
+        BaseHolder = tempBase.getReadableDatabase();
         ChatAdapter convos = new ChatAdapter(readConvos(BaseHolder));
         Bundle bundle = new Bundle();
         getSupportFragmentManager().beginTransaction()
@@ -65,23 +65,22 @@ public class Chat extends AppCompatActivity {
     @SuppressLint("Range")
     public ArrayList<Conversations> readConvos(SQLiteDatabase db){
 
-        Cursor point = db.rawQuery("select * from "+ChatDatabaseHelper.TABLE_Of_My_ITEMS+" where "+ChatDatabaseHelper.KEY_CONVO_ID +" in( select distinct ChatDatabaseHelper.KEY_CONVO_ID from ChatDatabaseHelper.Table_Of_My_ITEMS)"
-                ,new String[]{UserID,UserID});
+        Cursor point = db.rawQuery("select * from " + DatabaseHelper.TABLE_Of_My_ITEMS + " where "+DatabaseHelper.KEY_CONVO_ID + " in( select distinct " + DatabaseHelper.KEY_CONVO_ID + " from " + DatabaseHelper.TABLE_Of_My_ITEMS+")",null);
         ArrayList<Conversations> convos = new ArrayList<Conversations>();
         if(point.getCount()>=0){
             point.moveToFirst();
             while(!point.isAfterLast()){
                 String convoName;
-                    if (point.getString(point.getColumnIndex(ChatDatabaseHelper.KEY_SENT_TO)).equals(UserID)) {
-                        convoName = point.getString(point.getColumnIndex(ChatDatabaseHelper.KEY_SENT_BY));
+                    if (point.getString(point.getColumnIndex(DatabaseHelper.KEY_SENT_TO)).equals(UserID)) {
+                        convoName = point.getString(point.getColumnIndex(DatabaseHelper.KEY_SENT_BY));
                     }
                     else{
-                        convoName = point.getString(point.getColumnIndex(ChatDatabaseHelper.KEY_SENT_TO));
+                        convoName = point.getString(point.getColumnIndex(DatabaseHelper.KEY_SENT_TO));
                     }
 
 
 
-                @SuppressLint("Range") String message = point.getString(point.getColumnIndex(ChatDatabaseHelper.KEY_MESSAGE));
+                @SuppressLint("Range") String message = point.getString(point.getColumnIndex(DatabaseHelper.KEY_MESSAGE));
                 Conversations c = new Conversations(convoName,message);
                 convos.add(c);
             }
