@@ -17,11 +17,16 @@ public class ToolbarFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.toolbar_fragment, container, false);
+        //Layout Inflated
+
+        //Instantiate ImageViews to be used as buttons
         ImageView map = view.findViewById(R.id.map_button);
         ImageView search = view.findViewById(R.id.search_button);
         ImageView chat = view.findViewById(R.id.chat_button);
         ImageView settings = view.findViewById(R.id.settings_button);
+        //ImageViews instantiated
 
+        //Set onClickListeners for all ImageView buttons
         map.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,9 +55,9 @@ public class ToolbarFragment extends Fragment {
                 startActivity(settings1);
             }
         });
-
+        //Done setting onClickListeners
         return view;
-
+        //return view to be used as a fragment
 
 
     }
