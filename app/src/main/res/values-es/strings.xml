@@ -68,4 +68,6 @@
 
     <!--    View button-->
     <string name="viewButtontxt">Ver</string>
+    <string name="username2_string">Username</string>
+
 </resources>
