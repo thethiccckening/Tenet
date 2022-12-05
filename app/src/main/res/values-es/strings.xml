@@ -54,4 +54,18 @@
     <string name="____label_ek4_string">Perfil</string>
     <string name="____label_ek5_string">Hecho</string>
     <string name="____label_ek6_string">Desloguearse</string>
+    <!--    Toasts  -->
+    <string name="toastEnterField">Completar todos los cajas de texto</string>
+    <string name="toastRegSuccess">Registración exitosa</string>
+    <string name="toastAlrReg">Ya estas registrado</string>
+    <string name="toastSigninWelcome">Bienvenido al Sign in</string>
+
+    <!--    Dialog  -->
+    <string name="DialogTitle">Desloguearse</string>
+    <string name="DialogMsg">Guarda las cambias antes de salir</string>
+    <string name="DialogOk">Ok</string>
+    <string name="DialogCancel">Desloguearse</string>
+
+    <!--    View button-->
+    <string name="viewButtontxt">Ver</string>
 </resources>
