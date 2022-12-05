@@ -5,6 +5,7 @@
     <string name="forgot_my_password_string"><u>Forgot my password</u></string>
     <string name="password_string">Password</string>
     <string name="email_or_phone_number_string">Email or Phone number</string>
+    <string name="username_string">Enter Username</string>
     <string name="sign_up_string">Sign up</string>
     <string name="sign_in_string">Sign in</string>
     <string name="tenant_string">Tenet</string>
@@ -54,4 +55,21 @@
     <string name="____label_ek4_string">Profile</string>
     <string name="____label_ek5_string">Done</string>
     <string name="____label_ek6_string">Logout</string>
+
+<!--    Toasts  -->
+    <string name="toastEnterField">Please enter all the fields</string>
+    <string name="toastRegSuccess">Registration Successful</string>
+    <string name="toastAlrReg">Already Registered</string>
+    <string name="toastSigninWelcome">Welcome to Sign In</string>
+
+<!--    Dialog  -->
+    <string name="DialogTitle">Sign Out</string>
+    <string name="DialogMsg">Make sure to save any changes made</string>
+    <string name="DialogOk">Ok</string>
+    <string name="DialogCancel">Sign Out</string>
+
+<!--    View button-->
+    <string name="viewButtontxt">View</string>
+    <string name="username2_string">Username</string>
+
 </resources>
