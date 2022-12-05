@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Tenet</string>
+    <string name="ek_img_content">ExportKit Imagen</string>
+    <string name="tenet_string">Tenet</string>
+    <string name="forgot_my_password_string"><u>Olvidó mi password</u></string>
+    <string name="password_string">Password</string>
+    <string name="email_or_phone_number_string">Email o Teléfono</string>
+    <string name="sign_up_string">Inscribirse</string>
+    <string name="sign_in_string">Registrarse</string>
+    <string name="tenant_string">Tenet</string>
+    <string name="accept_terms_and_conditions_string">Aceptar bases y condiciones</string>
+    <string name="____input_text_string">Entregar tu ciudad</string>
+    <string name="____label_string">Lugar</string>
+    <string name="____label_ek1_string">Vista</string>
+    <string name="____label_ek2_string">Borrar</string>
+
+    <string name="____label_string_rpmin">$0</string>
+    <string name="____label_ek1_string_rpmax">$5000</string>
+    <string name="____label_ek2_string_rp">Alquilar precio</string>
+    <string name="left_bdroom_limit">0</string>
+    <string name="right_bdroom_limit">5</string>
+    <string name="bedroom_slider_label">Cuarto</string>
+    <string name="bathroom_slider_label">Baños</string>
+    <string name="parking_slider_label">Estacionamiento</string>
+    <string name="utilities_label">Utilidad</string>
+    <string name="hydro_label">Hidro</string>
+    <string name="heating_label">Calefacción</string>
+    <string name="water_label">Agua</string>
+    <string name="wifi_label">Wi-Fi</string>
+    <string name="cable_label">Tele</string>
+    <string name="amenities_label">Comodidades</string>
+    <string name="ac_label">A/C</string>
+    <string name="gym_label">Fitness</string>
+    <string name="laundry_label">Colada</string>
+    <string name="pool_label">Piscina</string>
+    <string name="dishwasher_label">Lavaplatos</string>
+
+    <string name="____input_text_string_chat">Última mensaje...</string>
+    <string name="____label_string_chat">Gerrardo</string>
+    <string name="____input_text_ek1_string">Fecha</string>
+    <string name="search_messages_string">Buscar Mensajes</string>
+
+    <string name="message_date_string">2022-10-08</string>
+    <string name="message__string">Mensaje</string>
+    <string name="message__ek1_string">Mensaje</string>
+
+    <string name="____input_text_string_settings">Mi nombre</string>
+    <string name="____label_string_settings">Nombre</string>
+    <string name="____input_text_ek1_string_settings">Mi email</string>
+    <string name="____label_ek1_string_settings">Email</string>
+    <string name="____input_text_ek2_string">Mi password</string>
+    <string name="____label_ek2_string_settings">Password</string>
+    <string name="____label_ek3_string">Notificaciones</string>
+    <string name="____label_ek4_string">Perfil</string>
+    <string name="____label_ek5_string">Hecho</string>
+    <string name="____label_ek6_string">Desloguearse</string>
+</resources>

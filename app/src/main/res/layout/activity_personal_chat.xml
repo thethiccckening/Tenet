@@ -14,8 +14,8 @@
 
             <View
                 android:id="@+id/_bg__chats_cont"
-                android:layout_width="393dp"
-                android:layout_height="829dp"
+                android:layout_width="match_parent"
+                android:layout_height="704dp"
                 android:layout_marginStart="0dp"
                 android:layout_marginTop="0dp"
                 android:background="@drawable/_bg__chats_cont_shape" />
@@ -52,13 +52,15 @@
                     android:layout_height="wrap_content"
                     >
 
-                    <ImageView android:id="@+id/manage_accounts_fill0_wght400_grad0_opsz48"
-                        android:src="@drawable/manage_accounts_fill0_wght400_grad0_opsz48"
-                        android:contentDescription="manage_accounts_fill0_wght400_grad0_opsz48"
+                    <ImageView
+                        android:id="@+id/manage_accounts_fill0_wght400_grad0_opsz48"
+                        android:layout_width="40.965576171875dp"
+                        android:layout_height="40dp"
                         android:layout_marginStart="258dp"
                         android:layout_marginTop="0dp"
-                        android:layout_width="40.965576171875dp"
-                        android:layout_height="40dp" />
+                        android:clickable="true"
+                        android:contentDescription="manage_accounts_fill0_wght400_grad0_opsz48"
+                        android:src="@drawable/manage_accounts_fill0_wght400_grad0_opsz48" />
 
                     <ImageView android:id="@+id/forum_fill0_wght400_grad0_opsz48"
                         android:src="@drawable/forum_fill0_wght400_grad0_opsz48_v2"
@@ -84,25 +86,29 @@
                             android:layout_height="wrap_content"
                             >
 
-                            <ImageView android:id="@+id/___color"
-                                android:src="@drawable/___color"
-                                android:contentDescription="___color"
+                            <ImageView
+                                android:id="@+id/___color"
+                                android:layout_width="34dp"
+                                android:layout_height="34dp"
                                 android:layout_marginStart="3dp"
                                 android:layout_marginTop="3dp"
-                                android:layout_width="34dp"
-                                android:layout_height="34dp" />
+                                android:clickable="true"
+                                android:contentDescription="___color"
+                                android:src="@drawable/___color" />
 
                         </RelativeLayout>
 
                     </RelativeLayout>
 
-                    <ImageView android:id="@+id/ic_location_on_24px"
-                        android:src="@drawable/ic_location_on_24px_v2"
-                        android:contentDescription="ic_location_on_24px"
+                    <ImageView
+                        android:id="@+id/ic_location_on_24px"
+                        android:layout_width="28.817138671875dp"
+                        android:layout_height="41.970458984375dp"
                         android:layout_marginStart="0dp"
                         android:layout_marginTop="0dp"
-                        android:layout_width="28.817138671875dp"
-                        android:layout_height="41.970458984375dp" />
+                        android:clickable="true"
+                        android:contentDescription="ic_location_on_24px"
+                        android:src="@drawable/ic_location_on_24px_v2" />
 
                 </RelativeLayout>
 
@@ -213,69 +219,12 @@
             </RelativeLayout>
 
 
-            <RelativeLayout android:id="@+id/received_message"
-                android:layout_marginTop="262dp"
-                android:layout_marginStart="19dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                >
-
-                <View
-                    android:id="@+id/base"
-                    android:layout_width="219dp"
-                    android:layout_height="53dp"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="0dp"
-                    android:alpha="0.56"
-                    android:background="@drawable/base_ek2_shape" />
-
-                <TextView
-                    android:id="@+id/message_"
-                    android:layout_width="match_parent"
-                    android:layout_height="28dp"
-                    android:layout_gravity="center_vertical|end"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="18dp"
-                    android:fontFamily="@font/arialn"
-                    android:gravity="start"
-                    android:text="@string/____input_text_string_chat"
-                    android:textColor="@color/tenet_color"
-                    android:textSize="16sp" />
-            </RelativeLayout>
-
-
             <RelativeLayout android:id="@+id/sent_message"
                 android:layout_marginTop="196dp"
                 android:layout_marginStart="156dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                >
-
-                <View
-                    android:id="@+id/base_ek1"
-                    android:layout_width="219dp"
-                    android:layout_height="53dp"
-                    android:layout_marginStart="0dp"
-                    android:layout_marginTop="0dp"
-                    android:alpha="0.56"
-                    android:background="@drawable/base_ek1_shape" />
-
-                <TextView
-                    android:id="@+id/user_sent_message"
-                    android:layout_width="match_parent"
-                    android:layout_height="28dp"
-                    android:layout_gravity="center_vertical|end"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="18dp"
-                    android:layout_marginRight="0dp"
-                    android:layout_marginBottom="0dp"
-                    android:fontFamily="@font/arialn"
-                    android:gravity="start"
-                    android:text="@string/____input_text_string_chat"
-                    android:textColor="@color/tenet_color"
-                    android:textSize="16sp" />
-
-            </RelativeLayout>
+                />
 
             <RelativeLayout android:id="@+id/send_message_action"
                 android:layout_marginTop="670dp"
@@ -305,16 +254,15 @@
 
                 <EditText
                     android:id="@+id/search_messages"
-                    android:layout_width="141dp"
-                    android:layout_height="28dp"
+                    android:layout_width="240dp"
+                    android:layout_height="43dp"
                     android:layout_marginLeft="27dp"
                     android:layout_marginTop="36dp"
+                    android:background="@android:color/transparent"
                     android:fontFamily="@font/arialn"
                     android:text=""
                     android:textColor="@color/search_messages_color"
-                    android:textSize="16sp"
-                    android:background="@android:color/transparent"
-                    />
+                    android:textSize="16sp" />
 
                 <ImageView android:id="@+id/path_3_copy_2_ek1"
                     android:src="@drawable/path_3_copy_2_ek1"
@@ -324,23 +272,38 @@
                     android:layout_width="355.5dp"
                     android:layout_height="1dp" />
 
-                <ImageView android:id="@+id/send_fill0_wght400_grad0_opsz48"
-                    android:src="@drawable/send_fill0_wght400_grad0_opsz48"
-                    android:contentDescription="send_fill0_wght400_grad0_opsz48"
+                <ImageView
+                    android:id="@+id/send_fill0_wght400_grad0_opsz48"
+                    android:layout_width="24.97119140625dp"
+                    android:layout_height="24.402587890625dp"
                     android:layout_marginStart="315dp"
                     android:layout_marginTop="31dp"
-                    android:layout_width="24.97119140625dp"
-                    android:layout_height="24.402587890625dp" />
+                    android:clickable="true"
+                    android:contentDescription="send_fill0_wght400_grad0_opsz48"
+                    android:src="@drawable/send_fill0_wght400_grad0_opsz48" />
 
             </RelativeLayout>
 
             <ImageView android:id="@+id/back_button"
                 android:src="@drawable/back_button"
                 android:contentDescription="back_button"
+
                 android:layout_marginStart="19dp"
                 android:layout_marginTop="77dp"
                 android:layout_width="29dp"
                 android:layout_height="20dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ChatList"
+                android:layout_width="320dp"
+                android:layout_height="503dp"
+                android:layout_below="@id/receiver_user_info"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="39dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="36dp" />
 
         </RelativeLayout>
 
