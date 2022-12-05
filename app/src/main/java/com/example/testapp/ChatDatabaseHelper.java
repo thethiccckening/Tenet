@@ -25,6 +25,7 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
         super(ctx, DATABASE_NAME, null, VERSION_NUM);
     }
     @Override
+
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         Log.i("ChatDatabaseHelper", "Calling onCreate");
         sqLiteDatabase.execSQL(DATABASE_CREATE);
