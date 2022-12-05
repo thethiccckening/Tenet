@@ -25,7 +25,7 @@ public class Signin extends AppCompatActivity {
 
     //TextViews
     TextView signIn, signUp, forgotPass;
-
+    public static String test;
     //Database for user accounts
     DatabaseHelper db;
 
@@ -43,7 +43,7 @@ public class Signin extends AppCompatActivity {
         forgotPass = findViewById(R.id.forgotPassword);
 
         //init EditTexts for login and password
-        loginText = findViewById(R.id.signupSource);
+        loginText = findViewById(R.id.usernameSource);
         passwordText = findViewById(R.id.passwordSource2);
 
         //init database
@@ -99,6 +99,7 @@ public class Signin extends AppCompatActivity {
             Boolean checkuserpass = db.checkUserPassWord(userVar, passVar);
             if(checkuserpass == true){
                 Toast.makeText(Signin.this, toastMsg2, Toast.LENGTH_SHORT).show();
+                test = userVar;
                 //starting the Search Activity after the user and pass have been added to db
                 Intent intentSearch = new Intent(Signin.this, Search.class);
                 intentSearch.putExtra("username", userVar);

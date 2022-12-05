@@ -46,12 +46,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public  static final String HOUSING_Address = "Address";
 
     //creating the query
-    private static final String DATABASE_CREATE = "CREATE TABLE IF NOT EXISTS "
+    private static final String DATABASE_CREATE = "create table "
             + TABLE_NAME + " (" + KEY_ID
             + " integer primary key autoincrement, " + KEY_USERNAME
             + " TEXT, " + KEY_EMAIL
             + " TEXT, " + KEY_PASSWORD
             + " TEXT);";
+    public static final String TABLE_Of_My_ITEMS = "MessageLog";
+    public static String KEY_ID_MESSAGE ="MESSAGE_NUMBER";
+    public static final String KEY_MESSAGE = "MESSAGES";
+    public static final String KEY_SENT_TO = "SENT_TO";
+    public static final String KEY_SENT_BY = "SENT_BY";
+    public static final String KEY_CONVO_ID = "CONVERSATION_ID";
+    private static final String DATABASE_CREATE2 = "create table "
+            + TABLE_Of_My_ITEMS + " ( " + KEY_ID_MESSAGE
+            + " integer primary key autoincrement, " + KEY_MESSAGE
+            + " text not null, "
+            + KEY_SENT_TO+ " text not null, "
+            + KEY_SENT_BY+ " text not null, "
+            + KEY_CONVO_ID+ " integer not null "+");";
 
     //String address_url = "https://maps.googleapis.com/maps/api/geocode/json?address={address}&key={API_KEY}";
 
@@ -88,6 +101,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL(DATABASE_CREATE_HOUSING);
         //insertDummydata();
 
+        db.execSQL(DATABASE_CREATE2);
     }
 
     @Override
@@ -96,6 +110,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("drop table if exists " + HOUSING_TABLE_NAME);
 
         onCreate(db);
+
     }
 
     //insert data
@@ -128,7 +143,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if(cursor.getCount() >0) {
 
 
-            long result = db.update(TABLE_NAME, contentValues, "name=?", new String[]{email});
+            long result = db.update(TABLE_NAME, contentValues, "email=?", new String[]{email});
+            readData();
 
             if (result == -1) {
                 return false;
@@ -147,6 +163,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery("Select * from AccountReg where email = ?", new String[] {email});
         if(cursor.getCount() >0) {
             long result = db.delete(TABLE_NAME,"name=?", new String[]{email});
+            readData();
 
             if (result == -1) {
                 return false;
@@ -169,6 +186,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void readData(){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursorChats = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+
 
         // moving our cursor to first position.
         if (cursorChats.moveToFirst()) {
@@ -218,9 +236,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //checking user's password
-    public Boolean checkUserPassWord(String email, String password){
+    public Boolean checkUserPassWord(String username, String password){
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("select * from AccountReg where email = ? and password =?", new String[] {email,password});
+        Cursor cursor = db.rawQuery("select * from AccountReg where username = ? and password =?", new String[] {username,password});
         if (cursor.getCount() > 0){
             return true;
         }

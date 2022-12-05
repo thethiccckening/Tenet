@@ -7,12 +7,12 @@
         <deviceKey>
           <Key>
             <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\Sekou.Diaby\.android\avd\Gdog_Emulator.avd" />
+            <value value="C:\Users\16478\.android\avd\Pixel_4_API_30_V2.avd" />
           </Key>
         </deviceKey>
       </Target>
     </targetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2022-12-05T14:25:55.619017300Z" />
+    <timeTargetWasSelectedWithDropDown value="2022-12-05T18:23:20.552346200Z" />
     <targetsSelectedWithDialog>
       <Target>
         <type value="QUICK_BOOT_TARGET" />

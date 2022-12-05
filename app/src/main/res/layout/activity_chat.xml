@@ -270,10 +270,10 @@
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/UserMessages"
-                android:layout_width="380dp"
-                android:layout_height="201dp"
+                android:layout_width="384dp"
+                android:layout_height="276dp"
                 android:layout_below="@id/search_message_textbox"
-                android:layout_marginTop="192dp" />
+                android:layout_marginTop="117dp" />
 
         </RelativeLayout>
 

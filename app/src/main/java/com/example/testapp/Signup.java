@@ -11,10 +11,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class Signup extends AppCompatActivity {
 
     //public variables for username, email, password
     public static String emailVar,userVar,passVar;
+    private String snackMsg = "please Sign in";
 
     //debugging
     protected static final String ACTIVITY_NAME = "LoginActivity"; //debugging message
@@ -114,9 +117,14 @@ public class Signup extends AppCompatActivity {
                     Intent intentSettings = new Intent(Signup.this, Settings.class);
                     intentSettings.putExtra("email", emailVar);
 
-                    //starting the Search Activity after the user and pass have been added to db
-                    Intent intentSearch = new Intent(Signup.this, Search.class);
-                    startActivity(intentSearch);
+                    //starting the SignIn Activity after the user and pass have been added to db
+                    String toastMsg0;
+                    toastMsg0 = "yea yea";
+                    Snackbar.make(view, toastMsg, Snackbar.LENGTH_LONG)
+                            .setAction("Action", null).show();
+                    Intent intentSignIn = new Intent(Signup.this, Signin.class);
+                    startActivity(intentSignIn);
+
 
 
                 }

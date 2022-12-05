@@ -43,20 +43,18 @@ public class Settings extends AppCompatActivity {
         username = findViewById(R.id.emailSource);
         password = findViewById(R.id.passwordETsource);
 
-        if(!signupOb.userVar.isEmpty()){
-            username.setText(signupOb.userVar);
-            password.setText(signupOb.passVar);
-        }
-        else{
-            username.setText(signinOb.userVar);
-            password.setText(signinOb.passVar);
-        }
+        username.setText(signinOb.userVar);
+        password.setText(signinOb.passVar);
 
-        email = db.getUserEmail(username.getText().toString());
+        email = signupOb.emailVar;
 
-        //init db
+
+        //init db for navbar
         db = new DatabaseHelper(this);
-
+        Bundle bundle = new Bundle();
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.navigation_bar,ToolbarFragment.class,bundle)
+                .commit();
     }
 
     @Override
@@ -114,11 +112,12 @@ public class Settings extends AppCompatActivity {
             Toast.makeText(Settings.this, toastMsg10, Toast.LENGTH_SHORT).show();
             return;
         }
+
         StringBuffer buffer = new StringBuffer();
         while (res.moveToNext()){
-            buffer.append("Email: " +res.getString(0)+"\n");
+            buffer.append("Email: " +res.getString(2)+"\n");
             buffer.append("Username: " +res.getString(1)+"\n");
-            buffer.append("Password: " +res.getString(1)+"\n\n");
+            buffer.append("Password: " +res.getString(3)+"\n\n");
         }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);

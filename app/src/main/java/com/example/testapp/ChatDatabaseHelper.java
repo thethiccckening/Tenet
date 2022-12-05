@@ -6,23 +6,26 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 public class ChatDatabaseHelper extends SQLiteOpenHelper {
-    private static String DATABASE_NAME = "User.db";
-    private static int VERSION_NUM = 2;
+    private static String DATABASE_NAME = "ConvoLog.db";
+    private static int VERSION_NUM = 1;
     public static final String TABLE_Of_My_ITEMS = "MessageLog";
-    public static String KEY_ID ="ID";
+    public static String KEY_ID ="MESSAGE_NUMBER";
     public static final String KEY_MESSAGE = "MESSAGES";
     public static final String KEY_SENT_TO = "SENT_TO";
     public static final String KEY_SENT_BY = "SENT_BY";
+    public static final String KEY_CONVO_ID = "CONVERSATION_ID";
     private static final String DATABASE_CREATE = "create table "
             + TABLE_Of_My_ITEMS + " ( " + KEY_ID
             + " integer primary key autoincrement, " + KEY_MESSAGE
             + " text not null, "
-            + KEY_SENT_TO+ " integer not null, "
-            + KEY_SENT_BY+ " integer not null " +");";
+            + KEY_SENT_TO+ " text not null, "
+            + KEY_SENT_BY+ " text not null, "
+            + KEY_CONVO_ID+ " integer not null "+");";
     public ChatDatabaseHelper(Context ctx) {
         super(ctx, DATABASE_NAME, null, VERSION_NUM);
     }
     @Override
+
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
         Log.i("ChatDatabaseHelper", "Calling onCreate");
         sqLiteDatabase.execSQL(DATABASE_CREATE);
@@ -35,4 +38,6 @@ public class ChatDatabaseHelper extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL("DROP TABLE IF EXISTS "+TABLE_Of_My_ITEMS);
         onCreate(sqLiteDatabase);
     }
+
+
 }
