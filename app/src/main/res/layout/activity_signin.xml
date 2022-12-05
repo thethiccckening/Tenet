@@ -51,7 +51,7 @@
                 android:background="@drawable/base_ek1_shape" />
 
             <EditText
-                android:id="@+id/signupSource"
+                android:id="@+id/usernameSource"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="62dp"
@@ -59,7 +59,7 @@
                 android:layout_marginRight="69dp"
                 android:background="@android:color/transparent"
                 android:fontFamily="@font/arialn"
-                android:hint="@string/email_or_phone_number_string"
+                android:hint="@string/usernameString"
                 android:textColor="@color/password_color"
                 android:textSize="16sp" />
 

@@ -38,18 +38,17 @@ public class Settings extends AppCompatActivity {
         username = findViewById(R.id.emailSource);
         password = findViewById(R.id.passwordETsource);
 
-        if(!signupOb.userVar.isEmpty()){
-            username.setText(signupOb.userVar);
-            password.setText(signupOb.passVar);
-        }
-        else{
-            username.setText(signinOb.userVar);
-            password.setText(signinOb.passVar);
-        }
+        username.setText(signinOb.userVar);
+        password.setText(signinOb.passVar);
 
-        email = db.getUserEmail(username.getText().toString());
+        email = signupOb.emailVar;
 
-        //init db
+//        email = db.getUserEmail(username.getText().toString());
+        Log.i(ACTIVITY_NAME, username.getText().toString());
+        Log.i(ACTIVITY_NAME, password.getText().toString());
+        Log.i(ACTIVITY_NAME, email);
+
+        //init db for navbar
         db = new DatabaseHelper(this);
         Bundle bundle = new Bundle();
         getSupportFragmentManager().beginTransaction()
