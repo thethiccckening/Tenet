@@ -51,7 +51,10 @@ public class Settings extends AppCompatActivity {
 
         //init db
         db = new DatabaseHelper(this);
-
+        Bundle bundle = new Bundle();
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.navigation_bar,ToolbarFragment.class,bundle)
+                .commit();
     }
 
     @Override
