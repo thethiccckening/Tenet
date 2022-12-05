@@ -13,11 +13,14 @@ import android.widget.Toast;
 
 public class Signup extends AppCompatActivity {
 
+    //public variables for username, email, password
+    public static String emailVar,userVar,passVar;
+
     //debugging
     protected static final String ACTIVITY_NAME = "LoginActivity"; //debugging message
 
     //EditTexts
-    EditText loginText, passwordText;
+    EditText loginText, passwordText, emailText;
 
     //TextViews
     TextView signIn, signUp;
@@ -39,7 +42,8 @@ public class Signup extends AppCompatActivity {
         signIn = findViewById(R.id.signInAction2);
 
         //init EditTexts for login and password
-        loginText = findViewById(R.id.signupSource);
+        emailText = findViewById(R.id.emailSource);
+        loginText = findViewById(R.id.usernameSource);
         passwordText = findViewById(R.id.passwordSource);
 
         //init database
@@ -47,56 +51,6 @@ public class Signup extends AppCompatActivity {
 
         //init sp
         sp = getSharedPreferences("DefaultSP",MODE_PRIVATE);
-
-//        //SignUp Event
-//        signUp.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                //storing user/pass source into strings
-//                String userVar = loginText.getText().toString();
-//                String passVar = passwordText.getText().toString();
-//
-//                //string for toasts
-//                String toastMsg, toastMsg2, toastMsg3;
-//                toastMsg = "Please enter all the fields";
-//                toastMsg2 = "Registration Successful";
-//                toastMsg3 = "Already Registered";
-//
-//
-//                if(userVar.equals("") || passVar.equals("")){
-//                    Toast.makeText(Signup.this, toastMsg, Toast.LENGTH_SHORT).show();
-//                }
-//                else{
-//                    Boolean checkUser = db.checkUserName(userVar);
-//                    if(checkUser == false){
-//                        Boolean insertUser = db.insertData(userVar, passVar);
-//                        if(insertUser == true){
-//                            Toast.makeText(Signup.this, toastMsg2, Toast.LENGTH_SHORT).show();
-//
-//                            //starting the Search Activity after the user and pass have been added to db
-//                            Intent intentSearch = new Intent(Signup.this, Search.class);
-//                            startActivity(intentSearch);
-//                        }
-//                        else{
-//                            Toast.makeText(Signup.this, toastMsg3, Toast.LENGTH_SHORT).show();
-//                        }
-//                    }
-//                }
-//
-//            }
-//        });
-//
-//        //SignIn Event
-//        signIn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                String toastMsg4 = "Welcome to Sign In";
-//                Toast.makeText(Signup.this, toastMsg4, Toast.LENGTH_SHORT).show();
-//
-//                Intent intentSignIn = new Intent(Signup.this, Signin.class);
-//                startActivity(intentSignIn);
-//            }
-//        });
 
     }
 
@@ -133,8 +87,9 @@ public class Signup extends AppCompatActivity {
     //SignUp button/event
     public void signUpEvent(View view) {
         //storing user/pass source into strings
-        String userVar = loginText.getText().toString();
-        String passVar = passwordText.getText().toString();
+        emailVar = emailText.getText().toString();
+        userVar = loginText.getText().toString();
+        passVar = passwordText.getText().toString();
 
         //string for toasts
         String toastMsg, toastMsg2, toastMsg3;
@@ -143,19 +98,25 @@ public class Signup extends AppCompatActivity {
         toastMsg3 = getString(R.string.toastAlrReg);
 
 
-        if(userVar.equals("") || passVar.equals("")){
+        if(userVar.equals("") || passVar.equals("") || emailVar.equals("")){
             Toast.makeText(Signup.this, toastMsg, Toast.LENGTH_SHORT).show();
         }
         else{
-            Boolean checkUser = db.checkUserName(userVar);
+            Boolean checkUser = db.checkUserName(emailVar);
             if(checkUser == false){
-                Boolean insertUser = db.insertData(userVar, passVar);
+                Boolean insertUser = db.insertData(emailVar,userVar, passVar);
                 if(insertUser == true){
                     Toast.makeText(Signup.this, toastMsg2, Toast.LENGTH_SHORT).show();
+
+                    //sending username to settings
+                    Intent intentSettings = new Intent(Signup.this, Settings.class);
+                    intentSettings.putExtra("email", emailVar);
 
                     //starting the Search Activity after the user and pass have been added to db
                     Intent intentSearch = new Intent(Signup.this, Search.class);
                     startActivity(intentSearch);
+
+
                 }
                 else{
                     Toast.makeText(Signup.this, toastMsg3, Toast.LENGTH_SHORT).show();

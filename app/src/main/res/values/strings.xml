@@ -5,6 +5,7 @@
     <string name="forgot_my_password_string"><u>Forgot my password</u></string>
     <string name="password_string">Password</string>
     <string name="email_or_phone_number_string">Email or Phone number</string>
+    <string name="username_string">Enter Username</string>
     <string name="sign_up_string">Sign up</string>
     <string name="sign_in_string">Sign in</string>
     <string name="tenant_string">Tenet</string>
@@ -69,5 +70,6 @@
 
 <!--    View button-->
     <string name="viewButtontxt">View</string>
+    <string name="username2_string">Username</string>
 
 </resources>
