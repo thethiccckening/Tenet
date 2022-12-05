@@ -41,6 +41,8 @@ public class Signup extends AppCompatActivity {
         signUp = findViewById(R.id.signupAction);
         signIn = findViewById(R.id.signInAction2);
 
+//
+
         //init EditTexts for login and password
         emailText = findViewById(R.id.emailSource);
         loginText = findViewById(R.id.usernameSource);
