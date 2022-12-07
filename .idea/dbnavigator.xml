@@ -5,15 +5,24 @@
     <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
+  <component name="DBNavigator.Project.DatabaseBrowserManager">
+    <autoscroll-to-editor value="false" />
+    <autoscroll-from-editor value="true" />
+    <show-object-properties value="true" />
+    <loaded-nodes />
+  </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="3e73b98e-d2c5-4937-9a3b-5af3c698440e">
-      <console name="UserInfo" type="STANDARD" schema="" session="Main">CREATE TABLE IF NOT EXISTS userinfo.users (
+      <console name="UserInfo" type="STANDARD" schema="" session="Main"><![CDATA[CREATE TABLE IF NOT EXISTS userinfo.users (
 	column_1 integer PRIMARY KEY,
    	column_2 integer NOT NULL,
 	column_3 integer DEFAULT 0,
 	table_constraints
-)</console>
+)]]></console>
     </connection>
+  </component>
+  <component name="DBNavigator.Project.DatabaseEditorStateManager">
+    <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
