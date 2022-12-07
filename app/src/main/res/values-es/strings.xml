@@ -13,6 +13,7 @@
     <string name="____label_string">Lugar</string>
     <string name="____label_ek1_string">Vista</string>
     <string name="____label_ek2_string">Borrar</string>
+    <string name="username_string">Entregar Username</string>
 
     <string name="____label_string_rpmin">$0</string>
     <string name="____label_ek1_string_rpmax">$5000</string>
@@ -30,7 +31,7 @@
     <string name="cable_label">Tele</string>
     <string name="amenities_label">Comodidades</string>
     <string name="ac_label">A/C</string>
-    <string name="gym_label">Fitness</string>
+    <string name="gym_label">física</string>
     <string name="laundry_label">Colada</string>
     <string name="pool_label">Piscina</string>
     <string name="dishwasher_label">Lavaplatos</string>
@@ -69,5 +70,6 @@
     <!--    View button-->
     <string name="viewButtontxt">Ver</string>
     <string name="username2_string">Username</string>
+    <string name="usernameString">Entregar Username</string>
 
 </resources>

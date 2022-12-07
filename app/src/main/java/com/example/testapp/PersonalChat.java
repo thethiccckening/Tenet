@@ -28,7 +28,7 @@ import java.util.ArrayList;
 public class PersonalChat extends AppCompatActivity {
     private ArrayList<String> chatHistory = new ArrayList<String>();
     SQLiteDatabase BaseHolder;
-    String[] allItems = new String[]{String.valueOf(DatabaseHelper.KEY_ID), ChatDatabaseHelper.KEY_MESSAGE};
+    String[] allItems = new String[]{String.valueOf(DatabaseHelper.KEY_ID), DatabaseHelper.KEY_MESSAGE};
     Cursor pointer;
     String UserID;
     String OtherID;
@@ -62,11 +62,12 @@ public class PersonalChat extends AppCompatActivity {
 
                 chatHistory.add(message);
 
+
                 ContentValues value = new ContentValues();
-                value.put(ChatDatabaseHelper.KEY_MESSAGE,message);
-                value.put(ChatDatabaseHelper.KEY_SENT_BY,UserID);
-                value.put(ChatDatabaseHelper.KEY_SENT_TO,OtherID);
-                BaseHolder.insert(ChatDatabaseHelper.TABLE_Of_My_ITEMS,null,value);
+                value.put(DatabaseHelper.KEY_MESSAGE,message);
+                value.put(DatabaseHelper.KEY_SENT_BY,UserID);
+                value.put(DatabaseHelper.KEY_SENT_TO,OtherID);
+                BaseHolder.insert(DatabaseHelper.TABLE_Of_My_ITEMS,null,value);
                 list.notifyDataSetChanged();
                 chatField.setText("");
             }
@@ -76,14 +77,14 @@ public class PersonalChat extends AppCompatActivity {
     }
 
     public void addMessages(String userID, String otherID) {
-        pointer = BaseHolder.rawQuery("select * from " + ChatDatabaseHelper.TABLE_Of_My_ITEMS + " where " + ChatDatabaseHelper.KEY_SENT_BY
-                + "=? AND " + ChatDatabaseHelper.KEY_SENT_TO + "=? OR " + ChatDatabaseHelper.KEY_SENT_BY + "=? AND "
-                + ChatDatabaseHelper.KEY_SENT_TO + "=?", new String[]{userID, otherID, otherID, userID});
+        pointer = BaseHolder.rawQuery("select * from " + DatabaseHelper.TABLE_Of_My_ITEMS + " where " + DatabaseHelper.KEY_SENT_BY
+                + "=? AND " + DatabaseHelper.KEY_SENT_TO + "=? OR " + DatabaseHelper.KEY_SENT_BY + "=? AND "
+                + DatabaseHelper.KEY_SENT_TO + "=?", new String[]{userID, otherID, otherID, userID});
         if (pointer.getCount() >= 0) {
             pointer.moveToFirst();
             while (!pointer.isAfterLast()) {
-                @SuppressLint("Range") String sender = pointer.getString(pointer.getColumnIndex(ChatDatabaseHelper.KEY_SENT_BY));
-                @SuppressLint("Range") String message = pointer.getString(pointer.getColumnIndex(ChatDatabaseHelper.KEY_MESSAGE));
+                @SuppressLint("Range") String sender = pointer.getString(pointer.getColumnIndex(DatabaseHelper.KEY_SENT_BY));
+                @SuppressLint("Range") String message = pointer.getString(pointer.getColumnIndex(DatabaseHelper.KEY_MESSAGE));
                 chatHistory.add(message);
                 sendHistory.add(sender);
                 pointer.moveToNext();
@@ -106,13 +107,13 @@ public class PersonalChat extends AppCompatActivity {
         }
         @SuppressLint("Range")
         public Long getItemID(int position){
-            ChatDatabaseHelper data = new ChatDatabaseHelper(getContext());
+            DatabaseHelper data = new DatabaseHelper(getContext());
             pointer.moveToPosition(position);
-            if(pointer.getColumnIndex(ChatDatabaseHelper.KEY_ID)==-1){
+            if(pointer.getColumnIndex(DatabaseHelper.KEY_ID)==-1){
                 Long l = Long.valueOf(-1);
                 return l;
             }
-            else return pointer.getLong(pointer.getColumnIndex(ChatDatabaseHelper.KEY_ID));
+            else return pointer.getLong(pointer.getColumnIndex(DatabaseHelper.KEY_ID));
         }
         public View getView(int position, View convertView, ViewGroup parent){
             LayoutInflater inflater = PersonalChat.this.getLayoutInflater();

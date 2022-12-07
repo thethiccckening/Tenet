@@ -73,4 +73,7 @@
     <string name="username2_string">Username</string>
     <string name="usernameString">Enter Username</string>
 
+    <!-- key should be in local.properties file so that while uploading your code to a remote git repository, you do not end up uploading your key as well. -->
+    <string name="google_maps_api_key" translatable="false">AIzaSyB9kJoNq3VRUVGUntwBtYZw7mIJdZctxb8</string>
+
 </resources>

@@ -22,10 +22,10 @@ public class Search extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search);
         //Perform fragment transaction to bring up toolbar
-        Bundle bundle = new Bundle();
-        getSupportFragmentManager().beginTransaction()
-        .add(R.id.navigation_bar,ToolbarFragment.class,bundle)
-        .commit();
+            Bundle bundle = new Bundle();
+            getSupportFragmentManager().beginTransaction()
+            .add(R.id.navigation_bar,ToolbarFragment.class,bundle)
+            .commit();
         //Fragment transaction complete
         //Instantiate all views into usable java objects
             //EditTexts

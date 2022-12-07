@@ -1,0 +1,321 @@
+@startuml
+
+title __Tenet's Class Diagram__\n
+
+  namespace com.example.testapp {
+    class com.example.testapp.Chat {
+        {static} # ACTIVITY_NAME : String
+        ~ BaseHolder : SQLiteDatabase
+        ~ UserID : String
+        ~ convoID : String
+        + onClickConvo()
+        + onClickSearch()
+        + onClickSettings()
+        + readConvos()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.ChatAdapter {
+        + mConverse : ArrayList<Conversations>
+        - checker : Cursor
+        + ChatAdapter()
+        + getItemCount()
+        + onBindViewHolder()
+        + onCreateViewHolder()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.ChatAdapter.ViewHolder {
+        + contactName : TextView
+        + messageText : TextView
+        + ViewHolder()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.Conversations {
+        ~ convoName : String
+        ~ lastconvo : String
+        + Conversations()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.DatabaseHelper {
+        {static} + DATABASE_NAME : String
+        {static} + DATABASE_Version : int
+        {static} + HOUSING_AMENITIES : String
+        {static} + HOUSING_Address : String
+        {static} + HOUSING_BATHROOM : String
+        {static} + HOUSING_BEDROOM : String
+        {static} + HOUSING_CITY : String
+        {static} + HOUSING_COUNTRY : String
+        {static} + HOUSING_DESCRIPTION : String
+        {static} + HOUSING_KEY_ID : String
+        {static} + HOUSING_LAT : String
+        {static} + HOUSING_LONG : String
+        {static} + HOUSING_NAME : String
+        {static} + HOUSING_PARKING : String
+        {static} + HOUSING_PRICE : String
+        {static} + HOUSING_STATE : String
+        {static} + HOUSING_TABLE_NAME : String
+        {static} + HOUSING_TYPE : String
+        {static} + HOUSING_UTILITIES : String
+        {static} + KEY_CONVO_ID : String
+        {static} + KEY_EMAIL : String
+        {static} + KEY_ID : String
+        {static} + KEY_ID_MESSAGE : String
+        {static} + KEY_MESSAGE : String
+        {static} + KEY_PASSWORD : String
+        {static} + KEY_SENT_BY : String
+        {static} + KEY_SENT_TO : String
+        {static} + KEY_USERNAME : String
+        {static} + TABLE_NAME : String
+        {static} + TABLE_Of_My_ITEMS : String
+        {static} # ACTIVITY_NAME : String
+        {static} - DATABASE_CREATE : String
+        {static} - DATABASE_CREATE2 : String
+        {static} - DATABASE_CREATE_HOUSING : String
+        + DatabaseHelper()
+        + checkUserExists()
+        + checkUserName()
+        + checkUserPassWord()
+        + deleteData()
+        + getData()
+        + getUserEmail()
+        + insertData()
+        + onCreate()
+        + onUpgrade()
+        + readData()
+        + readpreferredHousingData()
+        + updateData()
+        + updatePassword()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.DatabaseHelper.AsyncTaskRunner {
+        # doInBackground()
+        # onPostExecute()
+        # onPreExecute()
+        # onProgressUpdate()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.MainActivity {
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.Map {
+        {static} # ACTIVITY_NAME : String
+        ~ Housing_list : List<Cursor>
+        ~ housingdb : SQLiteDatabase
+        - locationArrayList : ArrayList<LatLng>
+        - locationArrayListtitle : ArrayList<String>
+        - mMap : GoogleMap
+        - tmp_loc : LatLng
+        - user_loc : LatLng
+        + insertDummydata()
+        + onMapReady()
+        + readHousingData()
+        # onCreate()
+        ~ storeHousingDataInArrays()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.Map.AsyncTaskRunner {
+        # doInBackground()
+        # onPostExecute()
+        # onPreExecute()
+        # onProgressUpdate()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.Password {
+        ~ resetPass : Button
+        ~ username : EditText
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.PersonalChat {
+        ~ BaseHolder : SQLiteDatabase
+        ~ OtherID : String
+        ~ UserID : String
+        ~ allItems : String[]
+        ~ pointer : Cursor
+        - chatHistory : ArrayList<String>
+        - sendHistory : ArrayList<String>
+        + addMessages()
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.PersonalChat.ConvoAdapter {
+        - checker : Cursor
+        + ConvoAdapter()
+        + getCount()
+        + getItem()
+        + getItemID()
+        + getView()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.ResetActivity {
+        ~ confirmPass : Button
+        ~ newPass : EditText
+        ~ reNewPass : EditText
+        ~ username : TextView
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.Search {
+        # onCreate()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.Settings {
+        {static} # ACTIVITY_NAME : String
+        ~ email : String
+        ~ password : EditText
+        ~ username : EditText
+        + doneEvent()
+        + logoutEvent()
+        + viewEvent()
+        # onCreate()
+        # onDestroy()
+        # onPause()
+        # onResume()
+        # onStart()
+        # onStop()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.Signin {
+        {static} + emailVar : String
+        {static} + passVar : String
+        {static} + test : String
+        {static} + userVar : String
+        {static} # ACTIVITY_NAME : String
+        ~ forgotPass : TextView
+        ~ loginText : EditText
+        ~ passwordText : EditText
+        ~ signIn : TextView
+        ~ signUp : TextView
+        ~ sp : SharedPreferences
+        + forgotPasswordClick()
+        + onBackPressed()
+        + signInEvent()
+        + signUpEvent2()
+        # onCreate()
+        # onDestroy()
+        # onPause()
+        # onResume()
+        # onStart()
+        # onStop()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.Signup {
+        {static} + emailVar : String
+        {static} + passVar : String
+        {static} + userVar : String
+        {static} # ACTIVITY_NAME : String
+        ~ emailText : EditText
+        ~ loginText : EditText
+        ~ passwordText : EditText
+        ~ signIn : TextView
+        ~ signUp : TextView
+        ~ sp : SharedPreferences
+        - snackMsg : String
+        + signInEvent2()
+        + signUpEvent()
+        # onCreate()
+        # onDestroy()
+        # onPause()
+        # onResume()
+        # onStart()
+        # onStop()
+    }
+  }
+  
+
+  namespace com.example.testapp {
+    class com.example.testapp.ToolbarFragment {
+        + onCreateView()
+    }
+  }
+  
+
+  com.example.testapp.Chat -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.testapp.ChatAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.example.testapp.ChatAdapter +-down- com.example.testapp.ChatAdapter.ViewHolder
+  com.example.testapp.ChatAdapter.ViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.example.testapp.DatabaseHelper -up-|> android.database.sqlite.SQLiteOpenHelper
+  com.example.testapp.DatabaseHelper +-down- com.example.testapp.DatabaseHelper.AsyncTaskRunner
+  com.example.testapp.DatabaseHelper.AsyncTaskRunner -up-|> android.os.AsyncTask
+  com.example.testapp.MainActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.testapp.Map .up.|> com.google.android.gms.maps.OnMapReadyCallback
+  com.example.testapp.Map -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.testapp.Map o-- com.example.testapp.DatabaseHelper : dataDBhelper
+  com.example.testapp.Map +-down- com.example.testapp.Map.AsyncTaskRunner
+  com.example.testapp.Map.AsyncTaskRunner -up-|> android.os.AsyncTask
+  com.example.testapp.Password -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.testapp.Password o-- com.example.testapp.DatabaseHelper : db
+  com.example.testapp.PersonalChat -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.testapp.PersonalChat +-down- com.example.testapp.PersonalChat.ConvoAdapter
+  com.example.testapp.PersonalChat.ConvoAdapter -up-|> android.widget.ArrayAdapter
+  com.example.testapp.ResetActivity -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.testapp.ResetActivity o-- com.example.testapp.DatabaseHelper : db
+  com.example.testapp.Search -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.testapp.Settings -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.testapp.Settings o-- com.example.testapp.DatabaseHelper : db
+  com.example.testapp.Settings o-- com.example.testapp.Signin : signinOb
+  com.example.testapp.Settings o-- com.example.testapp.Signup : signupOb
+  com.example.testapp.Signin -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.testapp.Signin o-- com.example.testapp.DatabaseHelper : db
+  com.example.testapp.Signup -up-|> androidx.appcompat.app.AppCompatActivity
+  com.example.testapp.Signup o-- com.example.testapp.DatabaseHelper : db
+  com.example.testapp.ToolbarFragment -up-|> androidx.fragment.app.Fragment
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

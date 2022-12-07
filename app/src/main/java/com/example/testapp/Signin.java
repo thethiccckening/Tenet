@@ -122,7 +122,7 @@ public class Signin extends AppCompatActivity {
 
     public void forgotPasswordClick(View view) {
         //opening SignUp Activity
-        String toastMsg4 = "password thing";
+        String toastMsg4 = "Password Reset";
         Toast.makeText(Signin.this, toastMsg4, Toast.LENGTH_SHORT).show();
 
         Intent intentPassword = new Intent(Signin.this, Password.class);

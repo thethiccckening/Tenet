@@ -339,13 +339,14 @@
                     android:layout_height="wrap_content"
                     >
 
-                    <View   android:id="@+id/doneButton"
-                        android:onClick="doneEvent"
-                        android:background="@drawable/____color_l_container_shape"
+                    <View
+                        android:id="@+id/doneButton"
+                        android:layout_width="70dp"
+                        android:layout_height="32dp"
                         android:layout_marginStart="0dp"
                         android:layout_marginTop="0dp"
-                        android:layout_width="70dp"
-                        android:layout_height="32dp" />
+                        android:background="@drawable/____color_l_container_shape"
+                        android:onClick="doneEvent" />
 
                 </RelativeLayout>
 
