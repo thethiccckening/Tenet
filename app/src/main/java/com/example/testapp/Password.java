@@ -32,13 +32,13 @@ public class Password extends AppCompatActivity {
                 //String to store username
                 String user = username.getText().toString();
                 //toast if user does not put in username
-                String toastMsg4 = "Please enter User";
-                String toastMsg5 = "User does not exist";
+                String toastMsg0 = getString(R.string.enterUsername2);
+                String toastMsg01 = getString(R.string.userNotExist);
 
                 //db checking if user exists
                 Boolean checkuser = db.checkUserName(user);
                 if(user.equals("")){
-                    Toast.makeText(Password.this, toastMsg4, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Password.this, toastMsg0, Toast.LENGTH_SHORT).show();
                 }
                 else{
                     if(checkuser == true){
@@ -49,7 +49,7 @@ public class Password extends AppCompatActivity {
 
                     }
                     else{
-                        Toast.makeText(Password.this, toastMsg5, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Password.this, toastMsg01, Toast.LENGTH_SHORT).show();
                     }
                 }
             }

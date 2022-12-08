@@ -87,18 +87,18 @@ public class Signin extends AppCompatActivity {
         passVar = passwordText.getText().toString();
 
         //string for toasts
-        String toastMsg, toastMsg2, toastMsg3;
-        toastMsg = getString(R.string.toastEnterField);
-        toastMsg2 = "Login Successful";
-        toastMsg3 = "Invalid Credentials";
+        String toastMsg00, toastMsg01, toastMsg02;
+        toastMsg00 = getString(R.string.toastEnterField);
+        toastMsg01 = getString(R.string.LoginSuccessful);
+        toastMsg02 = getString(R.string.InvalidCredentials);
 
         if(userVar.equals("") || passVar.equals("")){
-            Toast.makeText(Signin.this, toastMsg, Toast.LENGTH_SHORT).show();
+            Toast.makeText(Signin.this, toastMsg00, Toast.LENGTH_SHORT).show();
         }
         else{
             Boolean checkuserpass = db.checkUserPassWord(userVar, passVar);
             if(checkuserpass == true){
-                Toast.makeText(Signin.this, toastMsg2, Toast.LENGTH_SHORT).show();
+                Toast.makeText(Signin.this, toastMsg01, Toast.LENGTH_SHORT).show();
                 test = userVar;
                 //starting the Search Activity after the user and pass have been added to db
                 Intent intentSearch = new Intent(Signin.this, Search.class);
@@ -106,14 +106,15 @@ public class Signin extends AppCompatActivity {
                 startActivity(intentSearch);
             }
             else{
-                Toast.makeText(Signin.this, toastMsg3, Toast.LENGTH_SHORT).show();
+                Toast.makeText(Signin.this, toastMsg02, Toast.LENGTH_SHORT).show();
             }
         }
     }
 
     public void signUpEvent2(View view) {
-        String toastMsg4 = "SignUp Welcomee";
-        Toast.makeText(Signin.this, toastMsg4, Toast.LENGTH_SHORT).show();
+        String toastMsg03;
+        toastMsg03 = getString(R.string.SignUpWelcome);
+        Toast.makeText(Signin.this, toastMsg03, Toast.LENGTH_SHORT).show();
 
         //opening SignUp Activity
         Intent intentSignUp = new Intent(Signin.this, Signup.class);
@@ -122,8 +123,9 @@ public class Signin extends AppCompatActivity {
 
     public void forgotPasswordClick(View view) {
         //opening SignUp Activity
-        String toastMsg4 = "Password Reset";
-        Toast.makeText(Signin.this, toastMsg4, Toast.LENGTH_SHORT).show();
+        String toastMsg03;
+        toastMsg03 = getString(R.string.PasswordReset);
+        Toast.makeText(Signin.this, toastMsg03, Toast.LENGTH_SHORT).show();
 
         Intent intentPassword = new Intent(Signin.this, Password.class);
         startActivity(intentPassword);

@@ -17,7 +17,6 @@ public class Signup extends AppCompatActivity {
 
     //public variables for username, email, password
     public static String emailVar,userVar,passVar;
-    private String snackMsg = "please Sign in";
 
     //debugging
     protected static final String ACTIVITY_NAME = "LoginActivity"; //debugging message
@@ -119,8 +118,6 @@ public class Signup extends AppCompatActivity {
                     //starting the SignIn Activity after the user and pass have been added to db
                     Intent intentSignIn = new Intent(Signup.this, Signin.class);
                     startActivity(intentSignIn);
-
-
 
                 }
                 else{

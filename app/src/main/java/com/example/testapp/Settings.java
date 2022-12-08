@@ -43,10 +43,6 @@ public class Settings extends AppCompatActivity {
 
         email = signupOb.emailVar;
 
-//        email = db.getUserEmail(username.getText().toString());
-        Log.i(ACTIVITY_NAME, username.getText().toString());
-        Log.i(ACTIVITY_NAME, password.getText().toString());
-        Log.i(ACTIVITY_NAME, email);
 
         //init db for navbar
         db = new DatabaseHelper(this);
@@ -87,8 +83,8 @@ public class Settings extends AppCompatActivity {
     }
 
     public void doneEvent(View view){
-        String toastMsg4 = "Entry Updated !";
-        String toastMsg5 = "Entry not Updated !";
+        String toastMsg02 = getString(R.string.EntryUpdated);
+        String toastMsg03 = getString(R.string.EntryNotUpdated);
 
 
         String usernameUpdate = username.getText().toString();
@@ -96,30 +92,31 @@ public class Settings extends AppCompatActivity {
 
         Boolean updateData = db.updateData(email, usernameUpdate, passwordUpdate);
         if(updateData == true){
-            Toast.makeText(Settings.this, toastMsg4, Toast.LENGTH_SHORT).show();
+            Toast.makeText(Settings.this, toastMsg02, Toast.LENGTH_SHORT).show();
         }
         else{
-            Toast.makeText(Settings.this, toastMsg5, Toast.LENGTH_SHORT).show();
+            Toast.makeText(Settings.this, toastMsg03, Toast.LENGTH_SHORT).show();
         }
 
     }
 
     public void viewEvent(View view){
-        String toastMsg10 = "No Entries exists";
+        //string "entries not exist"
+        String toastMsg00 = getString(R.string.entries);
         Cursor res = db.getData();
         if(res.getCount() == 0){
-            Toast.makeText(Settings.this, toastMsg10, Toast.LENGTH_SHORT).show();
+            Toast.makeText(Settings.this, toastMsg00, Toast.LENGTH_SHORT).show();
             return;
         }
         StringBuffer buffer = new StringBuffer();
         while (res.moveToNext()){
-            buffer.append("Email: " +res.getString(0)+"\n");
+            buffer.append("Email: " +res.getString(2)+"\n");
             buffer.append("Username: " +res.getString(1)+"\n");
-            buffer.append("Password: " +res.getString(1)+"\n\n");
+            buffer.append("Password: " +res.getString(3)+"\n\n");
         }
 
         AlertDialog.Builder builder = new AlertDialog.Builder(Settings.this);
-        builder.setTitle("User info");
+        builder.setTitle(R.string.builderUserInfo);
         builder.setCancelable(true);
         builder.setMessage(buffer.toString());
         builder.show();

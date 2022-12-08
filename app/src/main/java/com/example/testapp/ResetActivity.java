@@ -44,25 +44,27 @@ public class ResetActivity extends AppCompatActivity {
                 String rePass = reNewPass.getText().toString();
 
                 //toast
-                String snackbarMsg = "Passwords are not the same";
+                String snackbarMsg = getString(R.string.resetPassSnack);
 
                 if (pass.equals(rePass)){
                     //toast
-                    String toastMsg5 = "Password Suc changed";
-                    String toastMsg6 = "Password bot changed";
+                    String toastMsg00 = getString(R.string.passSuccess);
+                    String toastMsg01 = getString(R.string.passNotSuccess);
 
-                    Boolean checkPasswordUpdate = db.updatePassword(user,pass);
-                    if(checkPasswordUpdate == true){
-                        Toast.makeText(ResetActivity.this, toastMsg5, Toast.LENGTH_SHORT).show();
-                        Intent intentSearch = new Intent(ResetActivity.this, Search.class);
-                        startActivity(intentSearch);
+                    Boolean PasswordUpdate = db.updatePassword(user,pass);
+                    if(PasswordUpdate == true){
+                        Toast.makeText(ResetActivity.this, toastMsg00, Toast.LENGTH_SHORT).show();
+                        Intent intentSignIn = new Intent(ResetActivity.this, Signin.class);
+                        startActivity(intentSignIn);
+                        finish();
                     }
                     else{
-                        Toast.makeText(ResetActivity.this, toastMsg6, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(ResetActivity.this, toastMsg01, Toast.LENGTH_SHORT).show();
                     }
                 }
                 else{
-
+                    Snackbar snackMsg = Snackbar.make(view,snackbarMsg,Snackbar.LENGTH_SHORT);
+                    snackMsg.show();
                 }
 
 

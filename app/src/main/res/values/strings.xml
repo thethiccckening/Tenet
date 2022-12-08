@@ -75,5 +75,27 @@
 
     <!-- key should be in local.properties file so that while uploading your code to a remote git repository, you do not end up uploading your key as well. -->
     <string name="google_maps_api_key" translatable="false">AIzaSyB9kJoNq3VRUVGUntwBtYZw7mIJdZctxb8</string>
+    <string name="UserText2">User</string>
+    <string name="usernameText">username</string>
+
+    <!--    new Strings (hello Patrick, please translate these below -->
+    <string name="resetPassSnack">Passwords do not match, please re-write</string>
+    <string name="enterUsername2">Please enter username</string>
+    <string name="userNotExist">Username does not Exist</string>
+    <string name="passSuccess">Password Successfully changed</string>
+    <string name="passNotSuccess">Error, please try again</string>
+    <string name="enterEmail">What is your Email?</string>
+    <string name="entries">No Entries exists</string>
+    <string name="builderUserInfo">User Information</string>
+    <string name="EntryUpdated">Entry Updated !</string>
+    <string name="EntryNotUpdated">Entry not Updated !</string>
+    <string name="LoginSuccessful">Login Successful</string>
+    <string name="InvalidCredentials">Invalid Credentials</string>
+    <string name="SignUpWelcome">SignUp Welcome</string>
+    <string name="PasswordReset">Password Reset</string>
+    <string name="UserUserText">UserName</string>
+
+
+    <!--    new Strings (hello Patrick, please translate these above -->
 
 </resources>

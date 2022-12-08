@@ -208,7 +208,7 @@
                     android:layout_marginTop="17dp"
                     android:layout_width="78dp"
                     android:layout_height="28dp"
-                    android:text="@string/____input_text_ek1_string_settings"
+                    android:text="@string/usernameText"
                     android:background="@android:color/transparent"
                     />
 
@@ -229,7 +229,7 @@
                         android:layout_marginTop="0dp"
                         android:layout_width="59dp"
                         android:layout_height="40dp"
-                        android:text="@string/____label_ek1_string_settings"
+                        android:text="@string/UserText2"
                         />
 
                 </RelativeLayout>
@@ -403,7 +403,7 @@
 
 
             </RelativeLayout>
-<!--            Start of View Button-->
+            <!--            Start of View Button-->
             <RelativeLayout android:id="@+id/view_button_ek12"
                 android:layout_marginTop="350dp"
                 android:layout_marginStart="33dp"
