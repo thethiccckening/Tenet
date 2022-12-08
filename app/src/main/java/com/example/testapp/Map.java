@@ -3,30 +3,36 @@ package com.example.testapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.content.ContentValues;
+import android.content.DialogInterface;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapsInitializer;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-
+import com.google.android.gms.maps.OnMapsSdkInitializedCallback;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Map extends AppCompatActivity implements OnMapReadyCallback {
+public class Map extends AppCompatActivity implements OnMapReadyCallback, OnMapsSdkInitializedCallback {
 
     private GoogleMap mMap;
     private LatLng user_loc, tmp_loc;
     private ArrayList<LatLng> locationArrayList;
     private ArrayList<String> locationArrayListtitle;
+    private boolean dummydataadded =false;
 
 
     DatabaseHelper dataDBhelper = new DatabaseHelper(this);;
@@ -35,16 +41,23 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
     List<Cursor> Housing_list = new ArrayList<>();
     protected static final String ACTIVITY_NAME = "MapActivity"; //debugging message
 
+    private ProgressBar simpleProgressBar ;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_map);
+        MapsInitializer.initialize(getApplicationContext(), MapsInitializer.Renderer.LATEST, this);
 
-        Bundle bundle = new Bundle();
-        getSupportFragmentManager().beginTransaction()
-                .add(R.id.navigation_bar,ToolbarFragment.class,bundle)
-                .commit();
+        setContentView(R.layout.activity_map);
+        simpleProgressBar = (ProgressBar) findViewById(R.id.simpleProgressBar);
+        simpleProgressBar.setVisibility(View.VISIBLE);
+
+
+        if (!dummydataadded){
+            insertDummydata();
+            dummydataadded = true;
+        }
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -54,14 +67,23 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
         locationArrayList = new ArrayList<>();
         locationArrayListtitle = new ArrayList<>();
 
-        Log.i(ACTIVITY_NAME, "getting all house");
-        insertDummydata();
 
-        storeHousingDataInArrays();
+        Bundle bundle = new Bundle();
+        getSupportFragmentManager().beginTransaction()
+                .add(R.id.navigation_bar,ToolbarFragment.class,bundle)
+                .commit();
+    }
 
-        //Map.AsyncTaskRunner runner = new Map.AsyncTaskRunner();
-        //runner.execute("All");
-
+    @Override
+    public void onMapsSdkInitialized(MapsInitializer.Renderer renderer) {
+        switch (renderer) {
+            case LATEST:
+                Log.d("MapsDemo", "The latest version of the renderer is used.");
+                break;
+            case LEGACY:
+                Log.d("MapsDemo", "The legacy version of the renderer is used.");
+                break;
+        }
     }
 
     @Override
@@ -69,7 +91,7 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-         user_loc = new LatLng(43.475123, -80.527557);
+        user_loc = new LatLng(43.475123, -80.527557);
         mMap.addMarker(new MarkerOptions()
                 .position(user_loc)
                 .title("User Location"));
@@ -77,6 +99,7 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
         mMap.setMaxZoomPreference(14.0f);
         mMap.moveCamera(CameraUpdateFactory.newLatLng(user_loc));
 
+        storeHousingDataInArrays();
 
         for (int i = 0; i < locationArrayList.size(); i++) {
 
@@ -85,6 +108,8 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
 
             // below line is use to move our camera to the specific location.
             mMap.moveCamera(CameraUpdateFactory.newLatLng(locationArrayList.get(i)));
+            Log.i(ACTIVITY_NAME, locationArrayListtitle.get(i).toString());
+
         }
 
     }
@@ -109,7 +134,6 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
                 Log.i(ACTIVITY_NAME, "lat" +String.valueOf(lat));
                 Log.i(ACTIVITY_NAME, "lat" +String.valueOf(longe));
 
-                tmp_loc = new LatLng(43.475123, -80.527557);
                 locationArrayList.add( new LatLng(lat, longe));
                 locationArrayListtitle.add(cursor.getString(cursor.getColumnIndex(dataDBhelper.HOUSING_NAME)));
                 //mMap.addMarker(new MarkerOptions().position(tmp_loc).title(cursor.getString(cursor.getColumnIndex(dataDBhelper.HOUSING_NAME))));
@@ -235,21 +259,26 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
         }
     }
 
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
+        super.onPointerCaptureChanged(hasCapture);
+    }
+
+    public void gethelpmenu(View view) {
+        Map.AsyncTaskRunner runner = new Map.AsyncTaskRunner();
+        runner.execute("menu");
+    }
+
 
     private class AsyncTaskRunner extends AsyncTask<String, String, String> {
-
 
         @Override
         protected String doInBackground(String... params) {
             try {
                 //read data from DB
-                if (params.equals("All")) {
-                   storeHousingDataInArrays();
-                }
-                else if (params.equals("specific")) {
+                if (params.equals("menu")) {
 
                 }
-
 
             } catch (Exception e) {
                 e.printStackTrace();
@@ -261,15 +290,29 @@ public class Map extends AppCompatActivity implements OnMapReadyCallback {
         @Override
         protected void onPostExecute(String result) {
             //populate the map
+            // Create the object of AlertDialog Builder class
+            AlertDialog.Builder builder = new AlertDialog.Builder(Map.this);
+            builder.setMessage("Patrick Maldonado, Sekou Diabila, Josh Gill, Daniel Faseyi. Activity Version 1.0. \n " +
+                    "To use the map, simply click on the markers to populate more information about the property");
+            builder.setTitle("Help Menu");
+            // Set Cancelable true for when the user clicks on the outside the Dialog Box then it will not show
+            builder.setCancelable(true);
+            // Set the positive button with yes name Lambda OnClickListener method is use of DialogInterface interface.
+            builder.setPositiveButton("close", (DialogInterface.OnClickListener) (dialog, which) -> {
+                // When the user click yes button then app will close
+                dialog.cancel();
+            });
+            // Create the Alert dialog
+            AlertDialog alertDialog = builder.create();
+            // Show the Alert Dialog box
+            alertDialog.show();
 
         }
-
 
         @Override
         protected void onPreExecute() {
 
         }
-
 
         @Override
         protected void onProgressUpdate(String... text) {

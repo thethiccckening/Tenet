@@ -20,8 +20,11 @@
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable/base_ek2_shapev2.xml" value="0.244" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/drawable/ic_launcher_background.xml" value="0.244" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/layout/activity_main.xml" value="0.3087719298245614" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/layout/activity_map.xml" value="0.22" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/layout/activity_search.xml" value="0.22" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/layout/activity_signin.xml" value="0.3087719298245614" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/layout/activity_signup.xml" value="0.25" />
+        <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/Tenet/app/src/main/res/layout/toolbar_fragment.xml" value="0.3047619047619048" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/testapp/app/src/main/res/drawable-nodpi/base_shape.xml" value="0.117" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/testapp/app/src/main/res/drawable-v24/base_ek2_shape.xml" value="0.117" />
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/testapp/app/src/main/res/drawable-v24/base_ek3_shape.xml" value="0.117" />
@@ -32,7 +35,6 @@
         <entry key="..\:/Users/Sekou.Diaby/AndroidStudioProjects/testapp/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/butto/Documents/4thYearCs/Tenet2/app/src/main/res/layout/activity_chat.xml" value="0.264" />
         <entry key="..\:/Users/butto/Documents/4thYearCs/Tenet2/app/src/main/res/layout/activity_main.xml" value="0.25" />
-        <entry key="..\:/Users/butto/Documents/4thYearCs/Tenet2/app/src/main/res/layout/activity_map.xml" value="0.1" />
         <entry key="..\:/Users/butto/Documents/4thYearCs/Tenet2/app/src/main/res/layout/activity_password.xml" value="0.1425438596491228" />
         <entry key="..\:/Users/butto/Documents/4thYearCs/Tenet2/app/src/main/res/layout/activity_personal_chat.xml" value="0.10989583333333333" />
         <entry key="..\:/Users/butto/Documents/4thYearCs/Tenet2/app/src/main/res/layout/activity_reset.xml" value="0.11842105263157894" />

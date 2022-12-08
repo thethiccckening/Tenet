@@ -263,6 +263,8 @@ public class Search extends AppCompatActivity {
 
                 //Done SharedPref manipulation
 
+                // show recycler view of list of hourse
+
 
                 Intent map = new Intent(getApplicationContext(),Map.class);
                 startActivity(map);
